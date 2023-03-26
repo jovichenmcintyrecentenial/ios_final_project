@@ -46,23 +46,4 @@ struct CartView_Previews: PreviewProvider {
     }
 }
 
-struct MainButton: View {
-    let title: String
-    let onTap: () -> Void
-    
-    var body: some View {
-        Button(action: onTap) {
-            Rectangle()
-                .fill(theme.accentColor)
-                .cornerRadius(18)
-                .frame(height: 60)
-                .overlay(
-                    Text(title)
-                             .font(Font.custom(Constants.poppinsBold, size: 18))
-                             .foregroundColor(Color.white)
-                             .font(.headline)
-                )
-        }
-    }
-}
 
