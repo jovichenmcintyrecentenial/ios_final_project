@@ -42,6 +42,8 @@
 		98A70D4029D0DE6700B13043 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3F29D0DE6700B13043 /* ViewExtension.swift */; };
 		98A70D4329D0E65600B13043 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4229D0E65600B13043 /* SignInView.swift */; };
 		98A70D4629D0E8BF00B13043 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4529D0E8BF00B13043 /* SignInViewModel.swift */; };
+		98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4829D0F09100B13043 /* SignUpView.swift */; };
+		98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4B29D0F18A00B13043 /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		98A70D3F29D0DE6700B13043 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		98A70D4229D0E65600B13043 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		98A70D4529D0E8BF00B13043 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		98A70D4829D0F09100B13043 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		98A70D4B29D0F18A00B13043 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98A70D4729D0F08500B13043 /* SignUp */,
 				98A70D4129D0E64500B13043 /* SignIn */,
 				98A70D2929D0B65A00B13043 /* MenuDetails */,
 				98A70CF729D0032B00B13043 /* Main */,
@@ -298,6 +303,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		98A70D4729D0F08500B13043 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D4A29D0F17B00B13043 /* ViewModel */,
+				98A70D4829D0F09100B13043 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		98A70D4A29D0F17B00B13043 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D4B29D0F18A00B13043 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,10 +417,12 @@
 				98A70D1B29D0333A00B13043 /* GridView.swift in Sources */,
 				98A70D4329D0E65600B13043 /* SignInView.swift in Sources */,
 				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
+				98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */,
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
+				98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,
 				98A70CF929D0036500B13043 /* Home.swift in Sources */,
 			);

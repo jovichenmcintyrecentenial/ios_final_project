@@ -10,20 +10,30 @@ import SwiftUI
 struct RoundedTextField: View {
     var placeholder: String
     @Binding var text: String
+    var isSecure: Bool = false
     
     var body: some View {
-        TextField(placeholder, text: $text)
-            .font(Font.custom(Constants.poppinsMedium, size: 16))
-            .placeHolder(
-                Text(placeholder)
-                    .foregroundColor(theme.mainSubtleFontColor),
-                show: text.count == 0)
-            .foregroundColor(theme.mainFontColor)
-            .padding(.horizontal,30)
-            .frame(minHeight: 69)
-            .background(theme.backgroundColorLight)
-            .cornerRadius(22)
-            .overlay(RoundedRectangle(cornerRadius: 22)
+        Group {
+            if isSecure {
+                SecureField(placeholder, text: $text,onCommit: {
+                })
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+            } else {
+                TextField(placeholder, text: $text)
+            }
+        }
+        .font(Font.custom(Constants.poppinsMedium, size: 16))
+        .placeHolder(
+            Text(placeholder)
+                .foregroundColor(theme.mainSubtleFontColor),
+            show: text.count == 0)
+        .foregroundColor(theme.mainFontColor)
+        .padding(.horizontal,30)
+        .frame(minHeight: 69)
+        .background(theme.backgroundColorLight)
+        .cornerRadius(15)
+        .overlay(RoundedRectangle(cornerRadius: 15)
             .stroke(theme.backgroundColorLight, lineWidth: 1))
     }
 }

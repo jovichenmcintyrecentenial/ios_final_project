@@ -32,7 +32,7 @@ struct SignInView: View {
                     ButtonText(title: "Don’t have an account?", fontSize: 16, color:Color(hex:0xA2A7BA) )
                     ButtonText(title: "Create Account", fontSize: 16 )
                 }
-                .navigation(to: MainView())
+                .navigation(to: SignupView())
 
             }
             .padding(.horizontal,30)
