@@ -14,7 +14,7 @@ struct Subtitle: View {
     var body: some View {
         Text(name)
         .foregroundColor(theme.mainSubtleFontColor)
-        .font(Font.custom(Constants.poppinsMedium, size: 16))
+        .fontWithLineHeight(font: UIFont(name: Constants.poppinsMedium, size:16)!, lineHeight: 16)
     }
 }
 

@@ -12,25 +12,46 @@ struct HomeView: View {
 
     
     var body: some View {
-        VStack {
-            HStack(alignment:.bottom){
-                VStack(alignment: .leading){
-                    Subtitle("Hello Johnson")
-                    Title("Hungry Now?")
+        ScrollView{
+            VStack(alignment:.leading) {
+                HStack(alignment:.bottom){
+                    VStack(alignment: .leading){
+                        Subtitle("Hello Johnson")
+                        Title("Hungry Now?")
+                    }
+                    Spacer()
+                    Image("temp_avatar")
                 }
-                Spacer()
-                Image("temp_avatar")
-              
+                SizedBox(height: 10)
+                RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
+                SizedBox(height: 10)
+                Title("HOUSE Deal!")
+                Subtitle("Top mouth watering deal of the week")
+                Image("banner")
+                    .resizable()
+                    .scaledToFit()
+                Title("Popular")
+                Subtitle("Top orders in the HOUSE!")
+                
+                
+
+
+                
             }
-            
-            .padding()
-            RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
-            Spacer()
-            
+            .padding(.horizontal,20)
+            .background(theme.backgroundColor)
+            .frame(maxWidth: .infinity, maxHeight: .infinity )
         }
-        .padding(.horizontal,20)
-        .background(theme.backgroundColor)
-        .frame(maxWidth: .infinity, maxHeight: .infinity )
+    }
+}
+
+struct SizedBox: View {
+    var height: CGFloat?
+    var width: CGFloat?
+    
+    var body: some View {
+        Color.clear
+            .frame(width: width, height: height)
     }
 }
 
