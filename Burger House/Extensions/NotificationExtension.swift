@@ -11,6 +11,7 @@ import SwiftUI
 
 extension Notification.Name {
     static let cartButtonPressed = Notification.Name("CartButtonPressed")
+    static let goShoppingPressed = Notification.Name("GoShopping")
 }
 
 func observe(notificationName: Notification.Name) -> AnyPublisher<Notification, Never> {

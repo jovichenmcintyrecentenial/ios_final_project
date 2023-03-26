@@ -23,6 +23,11 @@ struct MainView: View {
              { notification in
                 selectedTab = 4
             }
+             .onObserverNotification(.goShoppingPressed)
+              { notification in
+                 selectedTab = 1
+             }
+             
 
         }
       

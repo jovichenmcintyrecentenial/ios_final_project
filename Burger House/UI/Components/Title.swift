@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct Title: View {
-    let name: String
-    let fontSize: CGFloat = 29
-
     
+    let name: String
+    let fontName: String
+    let fontSize: CGFloat
+
     var body: some View {
+        
         Text(name)
-        .foregroundColor(theme.mainFontColor)
-        .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size: fontSize)!, lineHeight: fontSize)
-        .lineSpacing(0)
+                .foregroundColor(theme.mainFontColor)
+                .fontWithLineHeight(font: UIFont(name: fontName, size: fontSize )!, lineHeight: fontSize)
+                .lineSpacing(0)
     }
 }
 
 extension Title {
-    init(_ name: String) {
+    init(_ name: String, fontName: String = Constants.poppinsBold, fontSize: CGFloat = 29) {
         self.name = name
+        self.fontName = fontName
+        self.fontSize = fontSize
     }
 }
 
