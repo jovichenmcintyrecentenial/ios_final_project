@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var viewModel = HomeViewModel()
+
+    
     var body: some View {
         VStack {
-            HStack{
+            HStack(alignment:.bottom){
                 VStack(alignment: .leading){
                     Subtitle("Hello Johnson")
                     Title("Hungry Now?")
                 }
                 Spacer()
                 Image("temp_avatar")
+              
             }
-                .padding()
+            
+            .padding()
+            RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
             Spacer()
-
+            
         }
         .padding(.horizontal,20)
         .background(theme.backgroundColor)

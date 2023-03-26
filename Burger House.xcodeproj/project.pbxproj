@@ -28,6 +28,7 @@
 		98A70D1029D00DC100B13043 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D0F29D00DC100B13043 /* Constants.swift */; };
 		98A70D1229D0101200B13043 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1129D0101200B13043 /* Subtitle.swift */; };
 		98A70D1429D0104F00B13043 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1329D0104F00B13043 /* Title.swift */; };
+		98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1629D012A400B13043 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		98A70D0F29D00DC100B13043 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		98A70D1129D0101200B13043 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		98A70D1329D0104F00B13043 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		98A70D1629D012A400B13043 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		98A70CF729D0032B00B13043 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				98A70D1529D0128800B13043 /* ViewModel */,
 				98A70CDD29CFE52500B13043 /* MainView.swift */,
 				98A70CF829D0036500B13043 /* Home.swift */,
 				98A70CFA29D0037400B13043 /* Menu.swift */,
@@ -182,6 +185,14 @@
 				98A70D0229D00C5C00B13043 /* Rastanty-Cortez.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		98A70D1529D0128800B13043 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D1629D012A400B13043 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */,
 				98A70D1429D0104F00B13043 /* Title.swift in Sources */,
 				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
+				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
 				98A70CFF29D003A600B13043 /* Cart.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,
