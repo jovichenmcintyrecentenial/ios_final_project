@@ -30,7 +30,6 @@
 		98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1629D012A400B13043 /* HomeViewModel.swift */; };
 		98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1829D01F1B00B13043 /* SizedBox.swift */; };
 		98A70D1B29D0333A00B13043 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1A29D0333A00B13043 /* GridView.swift */; };
-		98A70D2629D0913C00B13043 /* Tahu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D2529D0913C00B13043 /* Tahu.ttf */; };
 		98A70D2829D0B20000B13043 /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2729D0B20000B13043 /* NavButton.swift */; };
 		98A70D2B29D0B67A00B13043 /* MenuDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2A29D0B67A00B13043 /* MenuDetails.swift */; };
 		98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */; };
@@ -66,7 +65,6 @@
 		98A70D1629D012A400B13043 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		98A70D1829D01F1B00B13043 /* SizedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedBox.swift; sourceTree = "<group>"; };
 		98A70D1A29D0333A00B13043 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
-		98A70D2529D0913C00B13043 /* Tahu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahu.ttf; sourceTree = "<group>"; };
 		98A70D2729D0B20000B13043 /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 		98A70D2A29D0B67A00B13043 /* MenuDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetails.swift; sourceTree = "<group>"; };
 		98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeBackButotn.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			children = (
 				98A70D0529D00C5C00B13043 /* Poppins-Bold.ttf */,
 				98A70D0429D00C5C00B13043 /* Poppins-Light.ttf */,
-				98A70D2529D0913C00B13043 /* Tahu.ttf */,
 				98A70D0729D00C5C00B13043 /* Poppins-Medium.otf */,
 				98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */,
 				98A70D0629D00C5C00B13043 /* Poppins-SemiBold.ttf */,
@@ -320,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98A70D2629D0913C00B13043 /* Tahu.ttf in Resources */,
 				98A70D0D29D00C5C00B13043 /* Poppins-Medium.otf in Resources */,
 				98A70CE329CFE52500B13043 /* Preview Assets.xcassets in Resources */,
 				98A70D0C29D00C5C00B13043 /* Poppins-SemiBold.ttf in Resources */,
