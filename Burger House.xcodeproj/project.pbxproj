@@ -7,24 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98A70CDC29CFE52500B13043 /* Burger_HouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDB29CFE52500B13043 /* Burger_HouseApp.swift */; };
-		98A70CDE29CFE52500B13043 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDD29CFE52500B13043 /* ContentView.swift */; };
+		98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */; };
+		98A70CDE29CFE52500B13043 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDD29CFE52500B13043 /* MainView.swift */; };
 		98A70CE029CFE52500B13043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A70CDF29CFE52500B13043 /* Assets.xcassets */; };
 		98A70CE329CFE52500B13043 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A70CE229CFE52500B13043 /* Preview Assets.xcassets */; };
 		98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CEA29CFE89E00B13043 /* RoundTextField.swift */; };
 		98A70CEE29D0008300B13043 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CED29D0008300B13043 /* Theme.swift */; };
 		98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF029D000AF00B13043 /* ColorExtension.swift */; };
+		98A70CF629D0030C00B13043 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF529D0030C00B13043 /* MainTabBar.swift */; };
+		98A70CF929D0036500B13043 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF829D0036500B13043 /* Home.swift */; };
+		98A70CFB29D0037400B13043 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFA29D0037400B13043 /* Menu.swift */; };
+		98A70CFD29D0037E00B13043 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFC29D0037E00B13043 /* Orders.swift */; };
+		98A70CFF29D003A600B13043 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFE29D003A600B13043 /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		98A70CD829CFE52500B13043 /* Burger House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Burger House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		98A70CDB29CFE52500B13043 /* Burger_HouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger_HouseApp.swift; sourceTree = "<group>"; };
-		98A70CDD29CFE52500B13043 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerHouseApp.swift; sourceTree = "<group>"; };
+		98A70CDD29CFE52500B13043 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		98A70CDF29CFE52500B13043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98A70CE229CFE52500B13043 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		98A70CEA29CFE89E00B13043 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		98A70CED29D0008300B13043 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		98A70CF029D000AF00B13043 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		98A70CF529D0030C00B13043 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		98A70CF829D0036500B13043 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		98A70CFA29D0037400B13043 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		98A70CFC29D0037E00B13043 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		98A70CFE29D003A600B13043 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +67,10 @@
 		98A70CDA29CFE52500B13043 /* Burger House */ = {
 			isa = PBXGroup;
 			children = (
+				98A70CF229D0025B00B13043 /* UI */,
 				98A70CEF29D0009E00B13043 /* Extensions */,
 				98A70CEC29D0006500B13043 /* Theme */,
-				98A70CE929CFE88C00B13043 /* Components */,
-				98A70CDB29CFE52500B13043 /* Burger_HouseApp.swift */,
-				98A70CDD29CFE52500B13043 /* ContentView.swift */,
+				98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */,
 				98A70CDF29CFE52500B13043 /* Assets.xcassets */,
 				98A70CE129CFE52500B13043 /* Preview Content */,
 			);
@@ -80,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				98A70CEA29CFE89E00B13043 /* RoundTextField.swift */,
+				98A70CF529D0030C00B13043 /* MainTabBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -98,6 +108,35 @@
 				98A70CF029D000AF00B13043 /* ColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		98A70CF229D0025B00B13043 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				98A70CF329D0026E00B13043 /* Views */,
+				98A70CE929CFE88C00B13043 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		98A70CF329D0026E00B13043 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98A70CF729D0032B00B13043 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98A70CF729D0032B00B13043 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				98A70CDD29CFE52500B13043 /* MainView.swift */,
+				98A70CF829D0036500B13043 /* Home.swift */,
+				98A70CFA29D0037400B13043 /* Menu.swift */,
+				98A70CFC29D0037E00B13043 /* Orders.swift */,
+				98A70CFE29D003A600B13043 /* Cart.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98A70CDE29CFE52500B13043 /* ContentView.swift in Sources */,
+				98A70CF629D0030C00B13043 /* MainTabBar.swift in Sources */,
+				98A70CDE29CFE52500B13043 /* MainView.swift in Sources */,
+				98A70CFB29D0037400B13043 /* Menu.swift in Sources */,
 				98A70CEE29D0008300B13043 /* Theme.swift in Sources */,
 				98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */,
-				98A70CDC29CFE52500B13043 /* Burger_HouseApp.swift in Sources */,
+				98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */,
+				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
+				98A70CFF29D003A600B13043 /* Cart.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,
+				98A70CF929D0036500B13043 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
