@@ -24,7 +24,16 @@ struct SignInView: View {
                     viewModel.signIn()
                 }, clickable:false)
                 .navigation(to: MainView())
+                ButtonText(title: "Forget Password")
+                    .navigation(to: MainView())
                 Spacer()
+
+                HStack {
+                    ButtonText(title: "Don’t have an account?", fontSize: 16, color:Color(hex:0xA2A7BA) )
+                    ButtonText(title: "Create Account", fontSize: 16 )
+                }
+                .navigation(to: MainView())
+
             }
             .padding(.horizontal,30)
           
@@ -37,5 +46,29 @@ struct SignInView: View {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+    }
+}
+
+
+struct ButtonText: View {
+    let title: String
+    let action: (() -> Void)? = nil
+    var fontSize: CGFloat? = nil
+    var color: Color = Color(hex: 0xDF933B)
+
+    var body: some View {
+        if let action = action {
+            Button(action: action) {
+                content
+            }
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
+        Text(title)
+            .font(Font.custom(Constants.poppinsMedium, size: fontSize ?? 18))
+            .foregroundColor(color)
     }
 }

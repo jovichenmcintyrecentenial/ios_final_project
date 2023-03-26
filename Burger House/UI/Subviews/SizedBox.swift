@@ -13,6 +13,6 @@ struct SizedBox: View {
     
     var body: some View {
         Color.clear
-            .frame(width: width, height: height).layoutPriority(3)
+            .frame(width: width ?? 0, height: height ?? 0)
     }
 }
