@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-
-
 struct CartView: View {
     var body: some View {
             VStack {
                 Text("Cart")
                     .padding()
             }
-        
         .frame(maxWidth: .infinity, maxHeight: .infinity) // fill the available space
     }
 }

@@ -10,10 +10,21 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            Text("Home")
+            HStack{
+                VStack(alignment: .leading){
+                    Subtitle("Hello Johnson")
+                    Title("Hungry Now?")
+                }
+                Spacer()
+                Image("temp_avatar")
+            }
                 .padding()
+            Spacer()
+
         }
-    
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal,20)
+        .background(theme.backgroundColor)
+        .frame(maxWidth: .infinity, maxHeight: .infinity )
     }
 }
+

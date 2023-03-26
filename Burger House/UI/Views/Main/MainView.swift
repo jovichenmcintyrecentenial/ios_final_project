@@ -18,9 +18,7 @@ struct MainView: View {
             CustomTabBar(selectedTab: $selectedTab)
         }
         .background(theme.backgroundColor)
-
     }
-    
 }
 
 
