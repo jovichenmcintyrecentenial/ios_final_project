@@ -81,23 +81,3 @@ struct CustomImageView: View {
 
     }
 }
-struct DetailView: View {
-    var body: some View {
-        VStack {
-            Text("Detail View")
-                .font(.largeTitle)
-                .padding()
-            
-            Button(action: {}) {
-                Text("Go back")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-            }
-            .padding()
-        }
-        .navigationTitle("Detail")
-    }
-}

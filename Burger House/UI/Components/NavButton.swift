@@ -22,9 +22,18 @@ struct NavigationModifier<Destination: View>: ViewModifier {
             }
             .hidden()
             content
+
                 .onTapGesture {
                     isActive = true
                 }
+                .onAppear {
+                    let appearance = UINavigationBarAppearance()
+                    appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+                    appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+                    UINavigationBar.appearance().standardAppearance = appearance
+
+                }
+
         }
     }
 }
