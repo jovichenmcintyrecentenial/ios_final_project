@@ -19,6 +19,10 @@ struct MainView: View {
                 CustomTabBar(selectedTab: $selectedTab)
             }
             .background(theme.backgroundColor)
+            .onObserverNotification(.cartButtonPressed)
+             { notification in
+                selectedTab = 4
+            }
 
         }
       

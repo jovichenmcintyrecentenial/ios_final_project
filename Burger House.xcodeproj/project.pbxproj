@@ -34,6 +34,7 @@
 		98A70D2829D0B20000B13043 /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2729D0B20000B13043 /* NavButton.swift */; };
 		98A70D2B29D0B67A00B13043 /* MenuDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2A29D0B67A00B13043 /* MenuDetails.swift */; };
 		98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */; };
+		98A70D2F29D0C60400B13043 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2E29D0C60400B13043 /* NotificationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		98A70D2729D0B20000B13043 /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 		98A70D2A29D0B67A00B13043 /* MenuDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetails.swift; sourceTree = "<group>"; };
 		98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeBackButotn.swift; sourceTree = "<group>"; };
+		98A70D2E29D0C60400B13043 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				98A70CF029D000AF00B13043 /* ColorExtension.swift */,
+				98A70D2E29D0C60400B13043 /* NotificationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */,
 				98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */,
 				98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */,
+				98A70D2F29D0C60400B13043 /* NotificationExtension.swift in Sources */,
 				98A70D1429D0104F00B13043 /* Title.swift in Sources */,
 				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
 				98A70D1B29D0333A00B13043 /* GridView.swift in Sources */,

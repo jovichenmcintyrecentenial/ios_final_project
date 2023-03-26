@@ -37,10 +37,17 @@ struct DetailView: View {
                 Title("$18.00")
                 CustomStepper()
                     .layoutPriority(100000)
-                Image("menu_button")
+                Button(action: {
+                    emit(notificationName: .cartButtonPressed)
+                }) {
+                    Image("menu_button")
+                }
             }
             SizedBox(height: 10)
 
+        }
+        .onDisappear {
+            print("ContentView is disappearing")
         }
         .padding(.horizontal,50)
             .background(theme.backgroundColor)
