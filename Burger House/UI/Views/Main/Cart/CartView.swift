@@ -15,6 +15,7 @@ struct CartView: View {
         {
            if viewModel.isEmpty {
                VStack {
+                   AppBar("My Cart")
                    Spacer()
                    Image("empty_cart_image")
                    SizedBox(height: 10)
@@ -64,3 +65,4 @@ struct MainButton: View {
         }
     }
 }
+

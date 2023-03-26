@@ -36,6 +36,8 @@
 		98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */; };
 		98A70D2F29D0C60400B13043 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2E29D0C60400B13043 /* NotificationExtension.swift */; };
 		98A70D3529D0CD8300B13043 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3429D0CD8300B13043 /* CartViewModel.swift */; };
+		98A70D3729D0D6AF00B13043 /* AppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3629D0D6AF00B13043 /* AppBar.swift */; };
+		98A70D3929D0D6E000B13043 /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3829D0D6E000B13043 /* CustomStepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeBackButotn.swift; sourceTree = "<group>"; };
 		98A70D2E29D0C60400B13043 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		98A70D3429D0CD8300B13043 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		98A70D3629D0D6AF00B13043 /* AppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBar.swift; sourceTree = "<group>"; };
+		98A70D3829D0D6E000B13043 /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				98A70D1A29D0333A00B13043 /* GridView.swift */,
 				98A70D2729D0B20000B13043 /* NavButton.swift */,
 				98A70D2C29D0BBFE00B13043 /* CustomeBackButotn.swift */,
+				98A70D3629D0D6AF00B13043 /* AppBar.swift */,
+				98A70D3829D0D6E000B13043 /* CustomStepper.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,9 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A70CF629D0030C00B13043 /* MainTabBar.swift in Sources */,
+				98A70D3729D0D6AF00B13043 /* AppBar.swift in Sources */,
 				98A70D1029D00DC100B13043 /* Constants.swift in Sources */,
 				98A70CDE29CFE52500B13043 /* MainView.swift in Sources */,
 				98A70CFB29D0037400B13043 /* Menu.swift in Sources */,
+				98A70D3929D0D6E000B13043 /* CustomStepper.swift in Sources */,
 				98A70CEE29D0008300B13043 /* Theme.swift in Sources */,
 				98A70D2B29D0B67A00B13043 /* MenuDetails.swift in Sources */,
 				98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */,
