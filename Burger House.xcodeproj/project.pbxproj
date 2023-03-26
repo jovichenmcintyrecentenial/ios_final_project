@@ -31,6 +31,7 @@
 		98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1829D01F1B00B13043 /* SizedBox.swift */; };
 		98A70D1B29D0333A00B13043 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1A29D0333A00B13043 /* GridView.swift */; };
 		98A70D2629D0913C00B13043 /* Tahu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D2529D0913C00B13043 /* Tahu.ttf */; };
+		98A70D2829D0B20000B13043 /* NavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D2729D0B20000B13043 /* NavButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		98A70D1829D01F1B00B13043 /* SizedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedBox.swift; sourceTree = "<group>"; };
 		98A70D1A29D0333A00B13043 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		98A70D2529D0913C00B13043 /* Tahu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahu.ttf; sourceTree = "<group>"; };
+		98A70D2729D0B20000B13043 /* NavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				98A70D1329D0104F00B13043 /* Title.swift */,
 				98A70D1829D01F1B00B13043 /* SizedBox.swift */,
 				98A70D1A29D0333A00B13043 /* GridView.swift */,
+				98A70D2729D0B20000B13043 /* NavButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
 				98A70D1B29D0333A00B13043 /* GridView.swift in Sources */,
 				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
+				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* Cart.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,

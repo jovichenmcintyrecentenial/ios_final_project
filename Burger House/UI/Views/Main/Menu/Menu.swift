@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuView: View {
     @StateObject private var viewModel = HomeViewModel()
+    
     var body: some View {
         ScrollView {
             VStack {

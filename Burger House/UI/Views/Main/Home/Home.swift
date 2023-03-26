@@ -14,6 +14,7 @@ struct HomeView: View {
     var body: some View {
         ScrollView{
             VStack(alignment:.leading) {
+                
                 HStack(alignment:.bottom){
                     VStack(alignment: .leading){
                         Subtitle("Hello Johnson")
@@ -22,7 +23,6 @@ struct HomeView: View {
                     Spacer()
                     Image("temp_avatar")
                 }
-                SizedBox(height: 10)
                 RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
                 SizedBox(height: 10)
                 Title("HOUSE Deal!")
@@ -33,7 +33,6 @@ struct HomeView: View {
                 Title("Popular")
                 Subtitle("Top orders in the HOUSE!")
                 GridView()
-                
             }
             .padding(.horizontal,20)
             .background(theme.backgroundColor)

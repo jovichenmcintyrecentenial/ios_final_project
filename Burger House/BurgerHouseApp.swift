@@ -11,7 +11,9 @@ import SwiftUI
 struct Burger_HouseApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            NavigationView {
+                MainView()
+            }
         }
     }
 }
