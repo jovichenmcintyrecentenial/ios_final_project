@@ -66,8 +66,7 @@ struct OrderCard: View {
                 MainButton(title: "View Receipt",height: 40,fontSize: 15.0, radius: 10) {
                 }
                 .frame(width: 120).crossAlignment(.leading)
-                
-                
+
                 
             }
             

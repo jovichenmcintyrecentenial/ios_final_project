@@ -14,19 +14,27 @@ struct MainButton: View {
     var fontName: String = Constants.poppinsBold
     var radius: CGFloat = 18
     let onTap: () -> Void
+    var clickable: Bool = true
 
-    
     var body: some View {
-        Button(action: onTap) {
-            Rectangle()
-                .fill(theme.accentColor)
-                .cornerRadius(radius)
-                .frame(height: height)
-                .overlay(
-                    Text(title)
-                        .font(Font.custom(fontName, size: fontSize))
-                        .foregroundColor(Color.white)
-                )
+        if clickable {
+            Button(action: onTap) {
+                buttonView()
+            }
+        } else {
+            buttonView()
         }
+    }
+
+    func buttonView() -> some View {
+        Rectangle()
+            .fill(theme.accentColor)
+            .cornerRadius(radius)
+            .frame(height: height)
+            .overlay(
+                Text(title)
+                    .font(Font.custom(fontName, size: fontSize))
+                    .foregroundColor(Color.white)
+            )
     }
 }

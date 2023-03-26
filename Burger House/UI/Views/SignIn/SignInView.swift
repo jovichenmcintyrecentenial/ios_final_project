@@ -1,0 +1,41 @@
+//
+//  SignIn.swift
+//  Burger House
+//
+//  Created by Jovi on 26/03/2023.
+//
+
+import SwiftUI
+
+struct SignInView: View {
+    @StateObject var viewModel = SignInViewModel()
+    
+    var body: some View {
+        VStack {
+            VStack {
+                Spacer()
+                Image("logo-full")
+                SizedBox(height: 10)
+                RoundedTextField(placeholder: "Email", text: $viewModel.email)
+                RoundedTextField(placeholder: "Password", text: $viewModel.password)
+                    .textContentType(.password)
+                SizedBox(height: 10)
+                MainButton(title: "Login",onTap:  {
+                    viewModel.signIn()
+                }, clickable:false)
+                .navigation(to: MainView())
+                Spacer()
+            }
+            .padding(.horizontal,30)
+          
+        }
+        .background(theme.backgroundColor)
+    }
+}
+
+
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView()
+    }
+}

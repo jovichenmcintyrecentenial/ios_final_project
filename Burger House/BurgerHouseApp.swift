@@ -12,7 +12,7 @@ struct Burger_HouseApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                MainView()
+                SignInView()
             }
         }
     }

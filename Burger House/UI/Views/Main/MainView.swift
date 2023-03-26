@@ -27,6 +27,7 @@ struct MainView: View {
               { notification in
                  selectedTab = 1
              }
+              .navigationBarBackButtonHidden(true)
              
 
         }

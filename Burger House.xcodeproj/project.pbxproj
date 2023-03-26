@@ -40,6 +40,8 @@
 		98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3B29D0DA0F00B13043 /* MainButton.swift */; };
 		98A70D3E29D0DC4600B13043 /* HorizontalDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3D29D0DC4600B13043 /* HorizontalDivider.swift */; };
 		98A70D4029D0DE6700B13043 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D3F29D0DE6700B13043 /* ViewExtension.swift */; };
+		98A70D4329D0E65600B13043 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4229D0E65600B13043 /* SignInView.swift */; };
+		98A70D4629D0E8BF00B13043 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4529D0E8BF00B13043 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		98A70D3B29D0DA0F00B13043 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		98A70D3D29D0DC4600B13043 /* HorizontalDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalDivider.swift; sourceTree = "<group>"; };
 		98A70D3F29D0DE6700B13043 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		98A70D4229D0E65600B13043 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		98A70D4529D0E8BF00B13043 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98A70D4129D0E64500B13043 /* SignIn */,
 				98A70D2929D0B65A00B13043 /* MenuDetails */,
 				98A70CF729D0032B00B13043 /* Main */,
 			);
@@ -276,6 +281,23 @@
 			path = Orders;
 			sourceTree = "<group>";
 		};
+		98A70D4129D0E64500B13043 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D4429D0E8A000B13043 /* ViewModel */,
+				98A70D4229D0E65600B13043 /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		98A70D4429D0E8A000B13043 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D4529D0E8BF00B13043 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +381,7 @@
 				98A70CDE29CFE52500B13043 /* MainView.swift in Sources */,
 				98A70CFB29D0037400B13043 /* Menu.swift in Sources */,
 				98A70D3929D0D6E000B13043 /* CustomStepper.swift in Sources */,
+				98A70D4629D0E8BF00B13043 /* SignInViewModel.swift in Sources */,
 				98A70CEE29D0008300B13043 /* Theme.swift in Sources */,
 				98A70D2B29D0B67A00B13043 /* MenuDetails.swift in Sources */,
 				98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */,
@@ -370,6 +393,7 @@
 				98A70D1429D0104F00B13043 /* Title.swift in Sources */,
 				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
 				98A70D1B29D0333A00B13043 /* GridView.swift in Sources */,
+				98A70D4329D0E65600B13043 /* SignInView.swift in Sources */,
 				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
