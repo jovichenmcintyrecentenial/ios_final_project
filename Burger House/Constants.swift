@@ -11,5 +11,5 @@ class Constants {
     static let poppinsMedium = "Poppins-Medium"
     static let poppinsRegular = "Poppins-Regular"
     static let poppinsSemiBold = "Poppins-SemiBold"
-    static let rastantyCortez = "Rastanty-Cortez"
+    static let tahu = "Tahu"
 }

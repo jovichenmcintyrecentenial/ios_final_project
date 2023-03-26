@@ -9,28 +9,30 @@ import SwiftUI
 
 
 struct GridView: View {
+    @State var isMenuItem = false
     var body: some View {
         VStack {
             HStack{
-                CustomImageView()
+                CustomImageView(isMenuItem: $isMenuItem)
                 SizedBox(width: 5)
-                CustomImageView()
+                CustomImageView(isMenuItem: $isMenuItem)
             }
             HStack{
-                CustomImageView()
+                CustomImageView(isMenuItem: $isMenuItem)
                 SizedBox(width: 5)
-                CustomImageView()
+                CustomImageView(isMenuItem: $isMenuItem)
             }
             HStack{
-                CustomImageView()
+                CustomImageView(isMenuItem: $isMenuItem)
                 SizedBox(width: 5)
-                CustomImageView()
-            }
+                CustomImageView(isMenuItem: $isMenuItem)            }
         }
     }
 }
 
 struct CustomImageView: View {
+    @Binding var isMenuItem: Bool
+
     var body: some View {
         ZStack () {
             RoundedRectangle(cornerRadius: 20)
@@ -49,14 +51,19 @@ struct CustomImageView: View {
                 Text("Burger Classic")
                     .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 17)
                     .foregroundColor(theme.mainFontColor)
-                HStack{
-                    Image("star").resizable().frame(width: 10,height: 10)
-                    Text("$8.00")
-                        .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
-                        .foregroundColor(theme.mainSubtleFontColor)
-                    Text("200 cals")
-                        .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
-                        .foregroundColor(theme.mainSubtleFontColor)
+                if(!isMenuItem){
+                    HStack{
+                        Image("star").resizable().frame(width: 10,height: 10)
+                        Text("$8.00")
+                            .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
+                            .foregroundColor(theme.mainSubtleFontColor)
+                        Text("200 cals")
+                            .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
+                            .foregroundColor(theme.mainSubtleFontColor)
+                    }
+                }
+                else{
+                    SizedBox(height: 5)
                 }
                 SizedBox(height: 10)
 

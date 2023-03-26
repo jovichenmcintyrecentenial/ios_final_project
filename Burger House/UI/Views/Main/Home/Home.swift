@@ -30,10 +30,8 @@ struct HomeView: View {
                 Image("banner")
                     .resizable()
                     .scaledToFit()
-
                 Title("Popular")
                 Subtitle("Top orders in the HOUSE!")
-                
                 GridView()
                 
             }

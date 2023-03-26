@@ -19,7 +19,6 @@
 		98A70CFB29D0037400B13043 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFA29D0037400B13043 /* Menu.swift */; };
 		98A70CFD29D0037E00B13043 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFC29D0037E00B13043 /* Orders.swift */; };
 		98A70CFF29D003A600B13043 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFE29D003A600B13043 /* Cart.swift */; };
-		98A70D0829D00C5C00B13043 /* Rastanty-Cortez.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D0229D00C5C00B13043 /* Rastanty-Cortez.ttf */; };
 		98A70D0929D00C5C00B13043 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */; };
 		98A70D0A29D00C5C00B13043 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D0429D00C5C00B13043 /* Poppins-Light.ttf */; };
 		98A70D0B29D00C5C00B13043 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D0529D00C5C00B13043 /* Poppins-Bold.ttf */; };
@@ -31,6 +30,7 @@
 		98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1629D012A400B13043 /* HomeViewModel.swift */; };
 		98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1829D01F1B00B13043 /* SizedBox.swift */; };
 		98A70D1B29D0333A00B13043 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D1A29D0333A00B13043 /* GridView.swift */; };
+		98A70D2629D0913C00B13043 /* Tahu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D2529D0913C00B13043 /* Tahu.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		98A70CFA29D0037400B13043 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		98A70CFC29D0037E00B13043 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		98A70CFE29D003A600B13043 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		98A70D0229D00C5C00B13043 /* Rastanty-Cortez.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rastanty-Cortez.ttf"; sourceTree = "<group>"; };
 		98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		98A70D0429D00C5C00B13043 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		98A70D0529D00C5C00B13043 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		98A70D1629D012A400B13043 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		98A70D1829D01F1B00B13043 /* SizedBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedBox.swift; sourceTree = "<group>"; };
 		98A70D1A29D0333A00B13043 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		98A70D2529D0913C00B13043 /* Tahu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahu.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,10 +162,9 @@
 		98A70CF729D0032B00B13043 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				98A70D1529D0128800B13043 /* ViewModel */,
+				98A70D1E29D0818100B13043 /* Menu */,
+				98A70D1D29D0817000B13043 /* Home */,
 				98A70CDD29CFE52500B13043 /* MainView.swift */,
-				98A70CF829D0036500B13043 /* Home.swift */,
-				98A70CFA29D0037400B13043 /* Menu.swift */,
 				98A70CFC29D0037E00B13043 /* Orders.swift */,
 				98A70CFE29D003A600B13043 /* Cart.swift */,
 			);
@@ -185,10 +184,10 @@
 			children = (
 				98A70D0529D00C5C00B13043 /* Poppins-Bold.ttf */,
 				98A70D0429D00C5C00B13043 /* Poppins-Light.ttf */,
+				98A70D2529D0913C00B13043 /* Tahu.ttf */,
 				98A70D0729D00C5C00B13043 /* Poppins-Medium.otf */,
 				98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */,
 				98A70D0629D00C5C00B13043 /* Poppins-SemiBold.ttf */,
-				98A70D0229D00C5C00B13043 /* Rastanty-Cortez.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -199,6 +198,23 @@
 				98A70D1629D012A400B13043 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98A70D1D29D0817000B13043 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98A70D1529D0128800B13043 /* ViewModel */,
+				98A70CF829D0036500B13043 /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98A70D1E29D0818100B13043 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				98A70CFA29D0037400B13043 /* Menu.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,12 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A70D2629D0913C00B13043 /* Tahu.ttf in Resources */,
 				98A70D0D29D00C5C00B13043 /* Poppins-Medium.otf in Resources */,
 				98A70CE329CFE52500B13043 /* Preview Assets.xcassets in Resources */,
 				98A70D0C29D00C5C00B13043 /* Poppins-SemiBold.ttf in Resources */,
 				98A70D0B29D00C5C00B13043 /* Poppins-Bold.ttf in Resources */,
 				98A70D0A29D00C5C00B13043 /* Poppins-Light.ttf in Resources */,
-				98A70D0829D00C5C00B13043 /* Rastanty-Cortez.ttf in Resources */,
 				98A70D0929D00C5C00B13043 /* Poppins-Regular.otf in Resources */,
 				98A70CE029CFE52500B13043 /* Assets.xcassets in Resources */,
 			);
