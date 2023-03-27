@@ -1,9 +1,3 @@
-//{{update here}}
-//  Constants.swift
-//  Burger House
-//
-//  Created by Jovi on 26/03/2023.
-//
 //  GROUP NUMBER: 18
 //  NAMES:
 //  Clinton Nwadiukor  - 301291242
@@ -21,6 +15,10 @@
 //
 //  DATE LAST MODIFIED:
 //  March 26, 2023
+//  Constants.swift
+//  Burger House
+//
+//  Created by Jovi on 26/03/2023.
 
 class Constants {
     static let poppinsBold = "Poppins-Bold"
