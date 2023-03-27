@@ -1,4 +1,4 @@
-//
+//{{update here}}
 //  SignUpView.swift
 //  Burger House
 //
@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//sign up view
 struct SignupView: View {
     @StateObject var viewModel = SignupViewModel()
     

@@ -1,4 +1,4 @@
-//
+//{{update here}}
 //  MenuDetails.swift
 //  Burger House
 //
@@ -47,7 +47,6 @@ struct DetailView: View {
 
         }
         .onDisappear {
-            print("ContentView is disappearing")
         }
         .padding(.horizontal,50)
             .background(theme.backgroundColor)
