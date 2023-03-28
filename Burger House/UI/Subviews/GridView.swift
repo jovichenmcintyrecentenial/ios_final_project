@@ -36,23 +36,25 @@ class Person {
 struct GridView: View {
     @State var isMenuItem = false
     @State var isDetailViewActive = false
-    @State var index = 0
+    @State var s = 0
 
     var body: some View {
         VStack {
             SizedBox(height: 10)
-            ForEach(0..<MenuItem.getMenuItems().count/2, id:\.self) { index in
+            ForEach(0..<MenuItem.getMenuItems().count, id:\.self) { index in
+                    if index.isMultiple(of: 2) {
                        HStack {
                            CustomImageView(isMenuItem: $isMenuItem,menuItem:MenuItem.getMenuItems()[index])
-                               .navigation(to: DetailView())
+                               .navigation(to: DetailView(menuItem:MenuItem.getMenuItems()[index]))
                            Spacer()
                                .frame(width: 20)
                            CustomImageView(isMenuItem: $isMenuItem, menuItem: MenuItem.getMenuItems()[index+1])
-                               .navigation(to: DetailView())
+                               .navigation(to: DetailView(menuItem:MenuItem.getMenuItems()[index+1]))
                        }
                        .padding(.bottom)
-
-
+                    } else {
+                        EmptyView()
+                    }
             }
         }
      
@@ -72,7 +74,7 @@ struct CustomImageView: View {
                     .stroke(theme.backgroundColorLight, lineWidth: 2)
                     .background(theme.backgroundColorLight.clipShape(RoundedRectangle(cornerRadius: 20))).padding(.top, 50)
                 
-                Image("burger_2")
+                Image(menuItem.imageUrl)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 120).padding(.bottom,60)
