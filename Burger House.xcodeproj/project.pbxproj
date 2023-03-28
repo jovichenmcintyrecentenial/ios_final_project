@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9863D9B629D36B89008F0C3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863D9B429D362C4008F0C3F /* MenuItem.swift */; };
 		98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */; };
 		98A70CDE29CFE52500B13043 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDD29CFE52500B13043 /* MainView.swift */; };
 		98A70CE029CFE52500B13043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A70CDF29CFE52500B13043 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9863D9B429D362C4008F0C3F /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		98A70CD829CFE52500B13043 /* Burger House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Burger House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerHouseApp.swift; sourceTree = "<group>"; };
 		98A70CDD29CFE52500B13043 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9863D9B329D362B8008F0C3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9863D9B429D362C4008F0C3F /* MenuItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		98A70CCF29CFE52400B13043 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				98A70D0E29D00CC400B13043 /* Burger-House-Info.plist */,
+				9863D9B329D362B8008F0C3F /* Models */,
 				98A70D0029D00C2100B13043 /* Assets */,
 				98A70CF229D0025B00B13043 /* UI */,
 				98A70CEF29D0009E00B13043 /* Extensions */,
@@ -424,6 +435,7 @@
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
+				9863D9B629D36B89008F0C3F /* MenuItem.swift in Sources */,
 				98A70D4E29D0F88400B13043 /* ButtonText.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */,
