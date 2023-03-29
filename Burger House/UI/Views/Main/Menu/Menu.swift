@@ -44,10 +44,17 @@ struct MenuView: View {
 
                         RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
                     }
+                    
                         .padding(.horizontal,20)
                         .padding(.top, 200)
+                        .padding(.horizontal,20)
+
                     ,alignment: .leading)
+                
                 GridView(isMenuItem: true).padding(.horizontal,20)
+                    .padding(.horizontal,20)
+
+                
                 Spacer()
             }
             

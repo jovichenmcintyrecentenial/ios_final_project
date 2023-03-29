@@ -95,10 +95,12 @@ struct CustomImageView: View {
                             Text(String(format: "$%.2f", menuItem.price))
                                 .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
                                 .foregroundColor(theme.mainSubtleFontColor)
+                                .lineLimit(1)
                             Spacer()
                             Text("\(menuItem.calories) Cals")
                                 .fontWithLineHeight(font: UIFont(name: Constants.poppinsBold, size:16)!, lineHeight: 16)
                                 .foregroundColor(theme.mainSubtleFontColor)
+                                .lineLimit(1)
                         }.padding(.horizontal,10)
                     }
                     else{
