@@ -51,8 +51,8 @@ struct DetailView: View {
             Spacer()
 
             HStack{
-                Title(String(format: "$%.2f",menuItem.price))
-                CustomStepper()
+                Title(String(format: "$%.2f",menuItem.price)).lineLimit(1).minimumScaleFactor(0.1)
+                CustomStepper(menuItem:menuItem).layoutPriority(1000000)
                     .layoutPriority(100000)
                 Button(action: {
                     emit(notificationName: .cartButtonPressed)

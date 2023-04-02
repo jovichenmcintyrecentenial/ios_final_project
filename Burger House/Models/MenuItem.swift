@@ -20,11 +20,13 @@ class MenuItem: Object {
     @Persisted var prepareTime: Int
     @Persisted var price: Double
     @Persisted var desc: String
-    
+    @Persisted var quantity: Int
+
     
     override init() {
         
     }
+
     
     convenience init(ID: Int, name: String, imageUrl: String, type: String, calories: Int, likes: Int, prepareTime: Int, price: Double, desc: String) {
         self.init()
@@ -37,6 +39,7 @@ class MenuItem: Object {
         self.prepareTime = prepareTime
         self.price = price
         self.desc = desc
+        self.quantity = 0
     }
     
     func create(){
@@ -50,6 +53,20 @@ class MenuItem: Object {
             
         }
      }
+    
+
+    func decreaseQunatity(){
+        
+        let realm = try! Realm()
+        try! realm.write {
+       
+            quantity -= 1
+
+            if(quantity < 0){
+                quantity = 0
+            }
+        }
+    }
     
     //function use to delete obj from realm database
     func delete(){

@@ -22,14 +22,19 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct CustomStepper: View {
+    
     @State var value: Int = 0
+    
+    var menuItem:MenuItem
     
     var body: some View {
         HStack {
             Button(action: {
                 if value > 0 {
+                    Cart.removeItem(menuItem)
                     value -= 1
                 }
             }) {
@@ -40,16 +45,20 @@ struct CustomStepper: View {
             Text("\(value)")
                 .padding(.horizontal, 10)
                 .fontWithLineHeight(font: UIFont(name: Constants.poppinsMedium, size: 30)!, lineHeight: 30)
-                      .foregroundColor(theme.mainFontColor)
+                .foregroundColor(theme.mainFontColor)
             Button(action: {
+     
+                Cart.addItem(menuItem)
                 value += 1
             }) {
                 Image(systemName: "plus.circle")
                     .foregroundColor(theme.accentColor)
-
+                
             }
-       
+            
         }
         .padding()
-    }
-}
+        .onAppear {
+            value = Cart.getAddedMenuItems(menuItem)
+        }
+    }}

@@ -13,52 +13,97 @@ class Cart {
         let realm = try! Realm()
         return realm.objects(MenuItem.self)
     }
+    
+    static func getAddedMenuItems(_ menuItem: MenuItem) -> Int {
+        let realm = try! Realm()
+
+        let foundItem = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
         
-    func removeItem(_ menuItem: MenuItem) {
-        menuItem.delete()
+        if(foundItem != nil){
+            return foundItem!.quantity
+        }
+        return 0
     }
     
-    func getAddedMenuItems(_ menuItem: MenuItem) -> Int {
-        var count = 0
+    static func removeItem(_ menuItem: MenuItem) {
         
         let realm = try! Realm()
         
-        for item in Cart.getItems(){
-            if(item.ID == menuItem.ID){
-                count += 1
+        let newItem:MenuItem? = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
+        
+        do {
+            try realm.write {
+                if(newItem != nil) {
+                    newItem!.quantity -= 1
+                }
             }
         }
+        catch {
+            print("Error updating quantity: \(error)")
+        }
         
-        return count
+        if(newItem != nil && newItem!.quantity <= 0){
+            newItem?.delete()
+        }
     }
     
-    func getTotal() -> Double {
-        var total = 0.0
-        for item in Cart.getItems(){
-            total += item.price
+    static func addItem(_ menuItem: MenuItem) {
+        
+        let realm = try! Realm()
+        
+        var newItem:MenuItem? = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
+       
+        if(newItem == nil) {
+            menuItem.create()
+            newItem = menuItem
         }
+        else{
+            
+        }
+        
+        do {
+            try realm.write {
+                newItem!.quantity += 1
+            }
+        }
+        catch {
+            print("Error updating quantity: \(error)")
+        }
+    }
+    
+    static func getTotal(_ menuItem: MenuItem) -> Double {
+        var total = menuItem.price * Double(menuItem.quantity)
+        
         return total
     }
     
-    func getTotalFormatted() -> String {
-        return String(format: "%.2f", getTotal())
+    static func getTotalFormatted(_ menuItem: MenuItem) -> String {
+        return String(format: "%.2f", getTotal(menuItem))
     }
     
-    func clearCartOfMenuItem(_ menuItem: MenuItem) {
-        var itemToDeletes:[MenuItem] = []
+    static func clearCartOfMenuItem(_ menuItem: MenuItem) {
         
-        for item in Cart.getItems(){
-            if(item.ID == menuItem.ID){
-                itemToDeletes.append(item)
-            }
-        }
+        let realm = try! Realm()
         
-        for itemToDelete in itemToDeletes {
-            itemToDelete.delete()
+        let newItem:MenuItem? = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
+    
+        if(newItem != nil && newItem!.quantity <= 0){
+            newItem?.delete()
         }
     }
     
-    func clearCart() {
+    static func has(menuItem: MenuItem)->Bool {
+        let realm = try! Realm()
+        let menuItem = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
+       
+        if(menuItem == nil){
+            return false
+        }
+        
+        return true
+    }
+    
+    static func clearCart() {
         let realm = try! Realm()
         
         // Get all MenuItem objects from the Realm database
@@ -69,11 +114,6 @@ class Cart {
             realm.delete(menuItems)
         }
     }
+
     
-    func addItem(_ menuItem: MenuItem) {
-        menuItem.create()
-    }
-    
-    static func createOrderRequest() {
-    }
 }
