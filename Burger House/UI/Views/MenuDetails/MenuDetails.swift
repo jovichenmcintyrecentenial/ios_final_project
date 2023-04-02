@@ -45,7 +45,7 @@ struct DetailView: View {
                 InfoView(imageName: "star_2", text: "\(menuItem.likes) likes")
             }
             SizedBox(height: 10)
-            Text(menuItem.description)
+            Text(menuItem.desc)
                 .fontWithLineHeight(font: UIFont(name: Constants.poppinsRegular, size: 16)!, lineHeight: 16)
                       .foregroundColor(theme.mainFontColor)
             Spacer()

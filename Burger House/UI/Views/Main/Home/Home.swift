@@ -14,15 +14,15 @@ struct HomeView: View {
     var body: some View {
         ScrollView{
             VStack(alignment:.leading) {
-                
                 HStack(alignment:.bottom){
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         Subtitle("Hello Johnson")
                         Title("Hungry Now?")
                     }
                     Spacer()
                     Image("temp_avatar")
                 }
+                SizedBox(height: 5)
                 RoundedTextField(placeholder: "Search your cravings", text: $viewModel.search)
                 SizedBox(height: 10)
                 Title("HOUSE Deal!")

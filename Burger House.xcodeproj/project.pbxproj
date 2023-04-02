@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F151F87AC0544AD01096B44 /* Pods_Burger_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E75CF0D2AAFBBF51AF9182A /* Pods_Burger_House.framework */; };
 		9863D9B629D36B89008F0C3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863D9B429D362C4008F0C3F /* MenuItem.swift */; };
-		9863D9B829D3A650008F0C3F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863D9B729D3A650008F0C3F /* CardModel.swift */; };
+		9863D9B829D3A650008F0C3F /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9863D9B729D3A650008F0C3F /* CartModel.swift */; };
 		98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */; };
 		98A70CDE29CFE52500B13043 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CDD29CFE52500B13043 /* MainView.swift */; };
 		98A70CE029CFE52500B13043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A70CDF29CFE52500B13043 /* Assets.xcassets */; };
@@ -55,7 +55,7 @@
 		40962C04EDDFEA1050772F74 /* Pods-Burger House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burger House.release.xcconfig"; path = "Target Support Files/Pods-Burger House/Pods-Burger House.release.xcconfig"; sourceTree = "<group>"; };
 		6A4B08F0D8A97BB8193CF10B /* Pods-Burger House.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burger House.debug.xcconfig"; path = "Target Support Files/Pods-Burger House/Pods-Burger House.debug.xcconfig"; sourceTree = "<group>"; };
 		9863D9B429D362C4008F0C3F /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		9863D9B729D3A650008F0C3F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		9863D9B729D3A650008F0C3F /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		98A70CD829CFE52500B13043 /* Burger House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Burger House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A70CDB29CFE52500B13043 /* BurgerHouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerHouseApp.swift; sourceTree = "<group>"; };
 		98A70CDD29CFE52500B13043 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				9863D9B429D362C4008F0C3F /* MenuItem.swift */,
-				9863D9B729D3A650008F0C3F /* CardModel.swift */,
+				9863D9B729D3A650008F0C3F /* CartModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 				98A70D4329D0E65600B13043 /* SignInView.swift in Sources */,
 				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
 				98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */,
-				9863D9B829D3A650008F0C3F /* CardModel.swift in Sources */,
+				9863D9B829D3A650008F0C3F /* CartModel.swift in Sources */,
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
