@@ -36,6 +36,8 @@ struct CustomStepper: View {
                 if value > 0 {
                     Cart.removeItem(menuItem)
                     value -= 1
+                    emit(notificationName: .updateCart)
+                    
                 }
             }) {
                 Image(systemName: "minus.circle")
@@ -47,9 +49,10 @@ struct CustomStepper: View {
                 .fontWithLineHeight(font: UIFont(name: Constants.poppinsMedium, size: 30)!, lineHeight: 30)
                 .foregroundColor(theme.mainFontColor)
             Button(action: {
-     
                 Cart.addItem(menuItem)
                 value += 1
+                emit(notificationName: .updateCart)
+
             }) {
                 Image(systemName: "plus.circle")
                     .foregroundColor(theme.accentColor)

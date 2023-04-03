@@ -29,7 +29,7 @@ struct CartView: View {
     var body: some View {
         VStack
         {
-           if viewModel.isEmpty {
+            if viewModel.results.count == 0 {
                VStack {
                    AppBar("My Cart")
                    Spacer()
@@ -47,8 +47,61 @@ struct CartView: View {
                    Spacer()
                }
            } else {
-               Text("Cart")
-                   .padding()
+               VStack {
+                   AppBar("My Cart")
+                       .overlay(
+                        HStack{
+                            Spacer()
+                            Text("$\(viewModel.total)")
+                                .foregroundColor(theme.mainFontColor)
+                                .padding(.trailing, 20)
+                        }
+                    )
+                   ScrollView {
+                       ForEach(viewModel.results) { item in
+                           ZStack{
+                               Rectangle()
+                                   .fill(theme.backgroundColorLight)
+                                   .cornerRadius(20)
+                                   .frame(maxWidth: .infinity)
+                               HStack{
+                                   
+                                   Image(item.imageUrl)
+                                       .resizable()
+                                       .scaledToFit()
+                                       .frame(width: 100, height: 100)
+                                   VStack{
+                                       Title(item.name,fontSize: 18)
+                                           .crossAlignment(.leading)
+                                       
+                                       Text(item.type)
+                                           .foregroundColor(theme.mainSubtleFontColor)
+                                           .fontWithLineHeight(font: UIFont(name: Constants.poppinsMedium, size:16)!, lineHeight: 16)
+                                           .crossAlignment(.leading)
+                                       
+                                       HStack (alignment: .firstTextBaseline){
+                                           Title("$\(item.price)",fontSize: 17)
+//                                           Spacer()
+                                           CustomStepper(menuItem: item)
+                                               .scaleEffect(0.7)
+                                               .frame( height: 30)
+                                               .layoutPriority(787878787878)
+                                       }
+                                       
+                                       
+                                   }
+                               }
+                               .padding(.horizontal, 20)
+                               .padding(.vertical, 10)
+                           }
+                           .padding(.horizontal, 20)
+
+                           
+                           
+                       }
+                   }
+               }
+               
            }
        }
         .background(theme.backgroundColor)

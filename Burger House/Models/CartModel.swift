@@ -71,14 +71,17 @@ class Cart {
         }
     }
     
-    static func getTotal(_ menuItem: MenuItem) -> Double {
-        var total = menuItem.price * Double(menuItem.quantity)
-        
-        return total
-    }
+    static func getTotal() -> Double {
+         var total = 0.0
+         for item in Cart.getItems(){
+             total += item.price * Double(item.quantity)
+         }
+         return total
+     }
+
     
-    static func getTotalFormatted(_ menuItem: MenuItem) -> String {
-        return String(format: "%.2f", getTotal(menuItem))
+    static func getTotalFormatted() -> String {
+        return String(format: "%.2f", Cart.getTotal())
     }
     
     static func clearCartOfMenuItem(_ menuItem: MenuItem) {

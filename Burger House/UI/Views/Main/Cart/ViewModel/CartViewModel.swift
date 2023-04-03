@@ -22,8 +22,33 @@
 //
 
 import Foundation
+import RealmSwift
 
 class CartViewModel: ObservableObject {
+    
     @Published var isEmpty = true
+    @Published var results:Results<MenuItem>
+    @Published var total:String = "0"
+
+    
+    var observer:NSObjectProtocol?
+    
+    init(){
+        total = Cart.getTotalFormatted()
+        results = Cart.getItems()
+        let observer = NotificationCenter.default.addObserver(forName: Notification.Name.updateCart, object: nil, queue: nil, using: handleNotification)
+    }
+    
+    func handleNotification(_ notification: Notification) {
+        total = Cart.getTotalFormatted()
+        print("Received notification: \(notification)")
+    }
+
+   
+
+    deinit{
+        NotificationCenter.default.removeObserver(observer!)
+    }
+    
 
 }
