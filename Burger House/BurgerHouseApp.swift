@@ -23,7 +23,7 @@
 
 import SwiftUI
 
-@main
+ @main
 struct Burger_HouseApp: App {
     var body: some Scene {
         WindowGroup {
