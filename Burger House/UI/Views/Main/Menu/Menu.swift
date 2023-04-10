@@ -28,13 +28,19 @@ struct MenuView: View {
     @StateObject private var viewModel = HomeViewModel()
     
     @State private var region = MKCoordinateRegion(
-           center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194),
-           span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-       )
-
+        center: CLLocationCoordinate2D(latitude: 43.6532, longitude: -79.3832),
+        span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+    )
     
     private let annotations: [CustomAnnotation] = [
-        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194))
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6532, longitude: -79.3832)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6815, longitude: -79.3755)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.7228, longitude: -79.3451)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6555, longitude: -79.4157)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.7422, longitude: -79.3268)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6492, longitude: -79.4528)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6863, longitude: -79.4178)),
+        CustomAnnotation(coordinate: CLLocationCoordinate2D(latitude: 43.6680, longitude: -79.4044))
     ]
     
         var body: some View {
@@ -88,11 +94,14 @@ struct MenuView: View {
 
 struct MarkerView: View {
     var body: some View {
-        Image(systemName: "mappin.circle.fill")
-            .font(.system(size: 30))
+        Image("logo-map-pin")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 40, height: 40)
             .foregroundColor(.red)
     }
 }
+
 
 
 struct CustomAnnotation: Identifiable {

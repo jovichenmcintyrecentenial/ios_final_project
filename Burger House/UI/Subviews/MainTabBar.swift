@@ -29,7 +29,7 @@ struct CustomTabBar: View {
     var body: some View {
         HStack {
             TabBarItem(icon: "home", index: 0, selectedTab: $selectedTab)
-            TabBarItem(icon: "menu", index: 1, selectedTab: $selectedTab)
+            TabBarItem(icon: "map-icon", index: 1, selectedTab: $selectedTab)
             TabBarItem(icon: "orders", index: 2, selectedTab: $selectedTab)
             TabBarItem(icon: "cart", index: 3, selectedTab: $selectedTab)
         }
