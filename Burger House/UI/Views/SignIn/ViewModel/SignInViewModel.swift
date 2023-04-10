@@ -23,11 +23,42 @@
 
 import Foundation
 
-class SignInViewModel: ObservableObject {
+class SignInViewModel: ErrorHandling {
     
     @Published var email = ""
     @Published var password = ""
     
-    func signIn() {
+    override func isValid() -> Bool {
+
+        // Check if email and password fields are not empty
+        if email.isEmpty {
+            errorMessage = "Please enter your email address."
+            showErrorAlert = true
+            return false
+        }
+        
+        if password.isEmpty {
+            errorMessage = "Please enter your password."
+            showErrorAlert = true
+            return false
+        }
+            
+        // Check if email field contains a valid email address
+        if !email.isValidEmail() {
+            errorMessage = "Please enter a valid email address."
+            showErrorAlert = true
+            return false
+        }
+        
+        // If all validations pass, return true
+        return true
+    }
+    
+    func isValidCredenticals()->Bool {
+        if (User.login(username: email, password: password) != nil) {
+           return true
+        } else {
+            return false
+        }
     }
 }

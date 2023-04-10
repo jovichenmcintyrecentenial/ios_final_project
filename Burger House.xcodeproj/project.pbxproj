@@ -48,6 +48,8 @@
 		98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4829D0F09100B13043 /* SignUpView.swift */; };
 		98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4B29D0F18A00B13043 /* SignUpViewModel.swift */; };
 		98A70D4E29D0F88400B13043 /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4D29D0F88400B13043 /* ButtonText.swift */; };
+		98E4F12629E386E50081F0E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12529E386E50081F0E4 /* User.swift */; };
+		98E4F12929E3D4E70081F0E4 /* ErrorHandlingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12829E3D4E70081F0E4 /* ErrorHandlingProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		98A70D4829D0F09100B13043 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		98A70D4B29D0F18A00B13043 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		98A70D4D29D0F88400B13043 /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
+		98E4F12529E386E50081F0E4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		98E4F12829E3D4E70081F0E4 /* ErrorHandlingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			children = (
 				9863D9B429D362C4008F0C3F /* MenuItem.swift */,
 				9863D9B729D3A650008F0C3F /* CartModel.swift */,
+				98E4F12529E386E50081F0E4 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		98A70CDA29CFE52500B13043 /* Burger House */ = {
 			isa = PBXGroup;
 			children = (
+				98E4F12729E3D4CC0081F0E4 /* Protocols */,
 				98A70D0E29D00CC400B13043 /* Burger-House-Info.plist */,
 				9863D9B329D362B8008F0C3F /* Models */,
 				98A70D0029D00C2100B13043 /* Assets */,
@@ -353,6 +359,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		98E4F12729E3D4CC0081F0E4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F12829E3D4E70081F0E4 /* ErrorHandlingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C7F35121C3E6BC019EEAB4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +506,7 @@
 				98A70CEE29D0008300B13043 /* Theme.swift in Sources */,
 				98A70D2B29D0B67A00B13043 /* MenuDetails.swift in Sources */,
 				98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */,
+				98E4F12929E3D4E70081F0E4 /* ErrorHandlingProtocol.swift in Sources */,
 				98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */,
 				98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */,
 				98A70D3529D0CD8300B13043 /* CartViewModel.swift in Sources */,
@@ -504,6 +519,7 @@
 				98A70D1729D012A400B13043 /* HomeViewModel.swift in Sources */,
 				98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */,
 				9863D9B829D3A650008F0C3F /* CartModel.swift in Sources */,
+				98E4F12629E386E50081F0E4 /* User.swift in Sources */,
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,

@@ -26,9 +26,11 @@ import SwiftUI
 struct NavigationModifier<Destination: View>: ViewModifier {
     @State private var isActive = false
     let destination: Destination
+    let conditionalNavigation: (() -> Bool)?
 
-    init(destination: Destination) {
+    init(destination: Destination, conditionalNavigation: (() -> Bool)? = nil) {
         self.destination = destination
+        self.conditionalNavigation = conditionalNavigation
     }
 
     func body(content: Content) -> some View {
@@ -38,24 +40,27 @@ struct NavigationModifier<Destination: View>: ViewModifier {
             }
             .hidden()
             content
-
                 .onTapGesture {
-                    isActive = true
+                    if let navigationCondition = conditionalNavigation {
+                        if navigationCondition() {
+                            isActive = true
+                        }
+                    } else {
+                        isActive = true
+                    }
                 }
                 .onAppear {
                     let appearance = UINavigationBarAppearance()
                     appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
                     appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
                     UINavigationBar.appearance().standardAppearance = appearance
-
                 }
-
         }
     }
 }
 
 extension View {
-    func navigation<T: View>(to destination: T) -> some View {
-        self.modifier(NavigationModifier(destination: destination))
+    func navigation<Destination: View>(to destination: Destination, conditionalNavigation: (() -> Bool)? = nil) -> some View {
+        self.modifier(NavigationModifier(destination: destination, conditionalNavigation: conditionalNavigation))
     }
 }

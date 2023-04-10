@@ -26,6 +26,7 @@ import SwiftUI
 //sign up view
 struct SignupView: View {
     @StateObject var viewModel = SignupViewModel()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -42,10 +43,10 @@ struct SignupView: View {
                 RoundedTextField(placeholder: "Email", text: $viewModel.email)
                     .keyboardType(.emailAddress)
                 SizedBox(height: 3)
-                RoundedTextField(placeholder: "Password", text: $viewModel.password,isSecure: true)
+                RoundedTextField(placeholder: "Password", text: $viewModel.password,isSecure: false)
                   
                 SizedBox(height: 3)
-                RoundedTextField(placeholder: "Confirm Password", text: $viewModel.confirmPassword,isSecure: true)
+                RoundedTextField(placeholder: "Confirm Password", text: $viewModel.confirmPassword,isSecure: false)
                     .textContentType(.password)
                 SizedBox(height: 3)
 
@@ -53,7 +54,15 @@ struct SignupView: View {
             }
             .padding(.top, 20)
             MainButton(title: "Sign up") {
-                viewModel.signup()
+                if viewModel.isValid() {
+                    viewModel.signup()
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                   // Show error message to user indicating invalid form
+                   print("Invalid form")
+                   viewModel.showErrorAlert = true
+                }
+
             }
             Spacer()
             
@@ -61,6 +70,13 @@ struct SignupView: View {
         .padding(.horizontal,30)
         .background(theme.backgroundColor)
         .customNav()
+        .alert(isPresented: $viewModel.showErrorAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 

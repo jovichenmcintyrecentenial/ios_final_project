@@ -38,11 +38,17 @@ struct SignInView: View {
                     .textContentType(.password)
                 SizedBox(height: 10)
                 MainButton(title: "Login",onTap:  {
-                    viewModel.signIn()
                 }, clickable:false)
-                .navigation(to: MainView())
-                ButtonText(title: "Forget Password")
-                    .navigation(to: MainView())
+                .navigation(to: MainView()) {
+                    if(viewModel.isValid()){
+                        if(viewModel.isValidCredenticals()){
+                            return true
+                        }
+                    }
+                    return false
+                    
+                }
+              
                 Spacer()
 
                 HStack {
@@ -56,6 +62,13 @@ struct SignInView: View {
           
         }
         .background(theme.backgroundColor)
+        .alert(isPresented: $viewModel.showErrorAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 
