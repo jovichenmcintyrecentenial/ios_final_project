@@ -50,6 +50,9 @@
 		98A70D4E29D0F88400B13043 /* ButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70D4D29D0F88400B13043 /* ButtonText.swift */; };
 		98E4F12629E386E50081F0E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12529E386E50081F0E4 /* User.swift */; };
 		98E4F12929E3D4E70081F0E4 /* ErrorHandlingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12829E3D4E70081F0E4 /* ErrorHandlingProtocol.swift */; };
+		98E4F12C29E53A270081F0E4 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12B29E53A270081F0E4 /* CheckoutView.swift */; };
+		98E4F12E29E541240081F0E4 /* CheckOutMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */; };
+		98E4F13129E542110081F0E4 /* CheckOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13029E542110081F0E4 /* CheckOutViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +103,9 @@
 		98A70D4D29D0F88400B13043 /* ButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonText.swift; sourceTree = "<group>"; };
 		98E4F12529E386E50081F0E4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		98E4F12829E3D4E70081F0E4 /* ErrorHandlingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingProtocol.swift; sourceTree = "<group>"; };
+		98E4F12B29E53A270081F0E4 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutMenuItem.swift; sourceTree = "<group>"; };
+		98E4F13029E542110081F0E4 /* CheckOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,7 @@
 				98A70D3B29D0DA0F00B13043 /* MainButton.swift */,
 				98A70D3D29D0DC4600B13043 /* HorizontalDivider.swift */,
 				98A70D4D29D0F88400B13043 /* ButtonText.swift */,
+				98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98E4F12A29E539FF0081F0E4 /* Checkout */,
 				98A70D4729D0F08500B13043 /* SignUp */,
 				98A70D4129D0E64500B13043 /* SignIn */,
 				98A70D2929D0B65A00B13043 /* MenuDetails */,
@@ -367,6 +375,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		98E4F12A29E539FF0081F0E4 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F12F29E541FD0081F0E4 /* ViewModel */,
+				98E4F12B29E53A270081F0E4 /* CheckoutView.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		98E4F12F29E541FD0081F0E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F13029E542110081F0E4 /* CheckOutViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C7F35121C3E6BC019EEAB4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +525,7 @@
 				98A70D3729D0D6AF00B13043 /* AppBar.swift in Sources */,
 				98A70D1029D00DC100B13043 /* Constants.swift in Sources */,
 				98A70CDE29CFE52500B13043 /* MainView.swift in Sources */,
+				98E4F12E29E541240081F0E4 /* CheckOutMenuItem.swift in Sources */,
 				98A70CFB29D0037400B13043 /* Maps.swift in Sources */,
 				98A70D3929D0D6E000B13043 /* CustomStepper.swift in Sources */,
 				98A70D4629D0E8BF00B13043 /* SignInViewModel.swift in Sources */,
@@ -523,8 +549,10 @@
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
+				98E4F13129E542110081F0E4 /* CheckOutViewModel.swift in Sources */,
 				9863D9B629D36B89008F0C3F /* MenuItem.swift in Sources */,
 				98A70D4E29D0F88400B13043 /* ButtonText.swift in Sources */,
+				98E4F12C29E53A270081F0E4 /* CheckoutView.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,

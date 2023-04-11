@@ -103,7 +103,7 @@ struct CartView: View {
                    Spacer()
                    MainButton(title: "Checkout",onTap:  {
                    }, clickable:false)
-                   .navigation(to: MainView())
+                   .navigation(to: CheckoutView())
                    .padding(.horizontal,20)
                    .padding(.bottom,10)
                }
