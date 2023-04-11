@@ -15,5 +15,7 @@
     <string>Your app needs access to your location to show it on the map.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Your app needs access to your location to show it on the map.</string>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDarkContent</string>
 </dict>
 </plist>

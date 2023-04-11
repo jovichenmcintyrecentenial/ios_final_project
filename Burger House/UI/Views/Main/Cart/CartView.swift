@@ -96,10 +96,16 @@ struct CartView: View {
                            }
                            .padding(.horizontal, 20)
 
-                           
-                           
+                          
                        }
+                     
                    }
+                   Spacer()
+                   MainButton(title: "Checkout",onTap:  {
+                   }, clickable:false)
+                   .navigation(to: MainView())
+                   .padding(.horizontal,20)
+                   .padding(.bottom,10)
                }
                
            }

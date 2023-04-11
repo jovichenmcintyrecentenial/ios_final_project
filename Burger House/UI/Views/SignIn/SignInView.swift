@@ -33,8 +33,8 @@ struct SignInView: View {
                 Spacer()
                 Image("logo-full")
                 SizedBox(height: 10)
-                RoundedTextField(placeholder: "Email", text: $viewModel.email)
-                RoundedTextField(placeholder: "Password", text: $viewModel.password)
+                RoundedTextField(placeholder: "Email", text: $viewModel.email,defaultValue: "j@g.com")
+                RoundedTextField(placeholder: "Password", text: $viewModel.password,defaultValue: "12345")
                     .textContentType(.password)
                 SizedBox(height: 10)
                 MainButton(title: "Login",onTap:  {

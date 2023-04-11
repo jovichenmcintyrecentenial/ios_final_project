@@ -30,6 +30,7 @@ struct Burger_HouseApp: App {
             NavigationView {
                 SignInView()
             }.navigationViewStyle(.stack)
+            
         }
     }
 }

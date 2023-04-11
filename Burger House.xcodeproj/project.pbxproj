@@ -19,7 +19,7 @@
 		98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF029D000AF00B13043 /* ColorExtension.swift */; };
 		98A70CF629D0030C00B13043 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF529D0030C00B13043 /* MainTabBar.swift */; };
 		98A70CF929D0036500B13043 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CF829D0036500B13043 /* Home.swift */; };
-		98A70CFB29D0037400B13043 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFA29D0037400B13043 /* Menu.swift */; };
+		98A70CFB29D0037400B13043 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFA29D0037400B13043 /* Maps.swift */; };
 		98A70CFD29D0037E00B13043 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFC29D0037E00B13043 /* Orders.swift */; };
 		98A70CFF29D003A600B13043 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A70CFE29D003A600B13043 /* CartView.swift */; };
 		98A70D0929D00C5C00B13043 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */; };
@@ -68,7 +68,7 @@
 		98A70CF029D000AF00B13043 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		98A70CF529D0030C00B13043 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		98A70CF829D0036500B13043 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		98A70CFA29D0037400B13043 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		98A70CFA29D0037400B13043 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		98A70CFC29D0037E00B13043 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		98A70CFE29D003A600B13043 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		98A70D0329D00C5C00B13043 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 			children = (
 				98A70D3A29D0D90800B13043 /* Orders */,
 				98A70D3029D0CC4500B13043 /* Cart */,
-				98A70D1E29D0818100B13043 /* Menu */,
+				98A70D1E29D0818100B13043 /* Map */,
 				98A70D1D29D0817000B13043 /* Home */,
 				98A70CDD29CFE52500B13043 /* MainView.swift */,
 			);
@@ -284,12 +284,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		98A70D1E29D0818100B13043 /* Menu */ = {
+		98A70D1E29D0818100B13043 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				98A70CFA29D0037400B13043 /* Menu.swift */,
+				98A70CFA29D0037400B13043 /* Maps.swift */,
 			);
-			path = Menu;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		98A70D2929D0B65A00B13043 /* MenuDetails */ = {
@@ -500,7 +500,7 @@
 				98A70D3729D0D6AF00B13043 /* AppBar.swift in Sources */,
 				98A70D1029D00DC100B13043 /* Constants.swift in Sources */,
 				98A70CDE29CFE52500B13043 /* MainView.swift in Sources */,
-				98A70CFB29D0037400B13043 /* Menu.swift in Sources */,
+				98A70CFB29D0037400B13043 /* Maps.swift in Sources */,
 				98A70D3929D0D6E000B13043 /* CustomStepper.swift in Sources */,
 				98A70D4629D0E8BF00B13043 /* SignInViewModel.swift in Sources */,
 				98A70CEE29D0008300B13043 /* Theme.swift in Sources */,

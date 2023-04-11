@@ -27,6 +27,14 @@ struct RoundedTextField: View {
     var placeholder: String
     @Binding var text: String
     var isSecure: Bool = false
+    var defaultValue: String? = nil // optional parameter for default value
+    
+    init(placeholder: String, text: Binding<String>, isSecure: Bool = false, defaultValue: String? = nil) {
+        self.placeholder = placeholder
+        self._text = text
+        self.isSecure = isSecure
+        self.defaultValue = defaultValue // set default value in init method
+    }
     
     var body: some View {
         Group {
@@ -43,7 +51,7 @@ struct RoundedTextField: View {
         .placeHolder(
             Text(placeholder)
                 .foregroundColor(theme.mainSubtleFontColor),
-            show: text.count == 0)
+            show: text.count == 0 && defaultValue == nil) // check if there is no text or defaultValue is nil
         .foregroundColor(theme.mainFontColor)
         .padding(.horizontal,30)
         .frame(minHeight: 69)
@@ -51,6 +59,11 @@ struct RoundedTextField: View {
         .cornerRadius(15)
         .overlay(RoundedRectangle(cornerRadius: 15)
             .stroke(theme.backgroundColorLight, lineWidth: 1))
+        .onAppear {
+            if let defaultValue = defaultValue, text.isEmpty {
+                text = defaultValue // set the default value if it exists and the text is empty
+            }
+        }
     }
 }
 
