@@ -55,7 +55,8 @@ class SignInViewModel: ErrorHandling {
     }
     
     func isValidCredenticals()->Bool {
-        if (User.login(username: email, password: password) != nil) {
+        if (LoginManger.login(username: email, password: password) != nil) {
+//            Order.clear()
            return true
         } else {
             return false

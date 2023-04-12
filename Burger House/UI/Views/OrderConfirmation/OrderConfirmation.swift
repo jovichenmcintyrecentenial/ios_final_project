@@ -22,9 +22,9 @@ struct OrderConfirmationView: View {
         .padding(.horizontal,20)
         .background(theme.backgroundColor)
         .onAppear {
+                        Order.createOrder()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-//                            emit(notificationName: .goShoppingPressed)
-
+                            Cart.clearCart()
                             emit(notificationName: .goToOrder)
                         }
                     }

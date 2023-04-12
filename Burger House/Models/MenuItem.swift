@@ -95,5 +95,29 @@ class MenuItem: Object,Identifiable {
              )
              return burgerMenuItems
      }
+    
+    
+    
 }
+
+class OrderMenuItem: MenuItem {
+    
+    
+   static func clone(menuItem:MenuItem) -> OrderMenuItem {
+        let clonedMenuItem = OrderMenuItem()
+        clonedMenuItem.ID = menuItem.ID
+        clonedMenuItem.name = menuItem.name
+        clonedMenuItem.imageUrl = menuItem.imageUrl
+        clonedMenuItem.type = menuItem.type
+        clonedMenuItem.calories = menuItem.calories
+        clonedMenuItem.likes = menuItem.likes
+        clonedMenuItem.prepareTime = menuItem.prepareTime
+        clonedMenuItem.price = menuItem.price
+        clonedMenuItem.desc = menuItem.desc
+        clonedMenuItem.quantity = menuItem.quantity
+        return clonedMenuItem
+    }
+    
+}
+
 

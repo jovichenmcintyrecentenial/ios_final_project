@@ -24,25 +24,12 @@ class User: Object {
         self.password = password
     }
     
-    static func login(username: String, password: String) -> User? {
+
+    //static function use to access data
+    static func getItems()->Results<MenuItem>{
         let realm = try! Realm()
-            
-        // Retrieve the user with the specified email address
-        guard let user = realm.objects(User.self).filter("email CONTAINS[cd] %@", username).first else {
-            // User not found
-            return nil
-        }
-            
-        // Compare the entered password with the user's password
-        if user.password == password {
-            // Passwords match, login successful
-            return user
-        } else {
-            // Passwords do not match, login failed
-            return nil
-        }
+        return realm.objects(MenuItem.self)
     }
-    
     func create(){
         let realm = try! Realm()
         

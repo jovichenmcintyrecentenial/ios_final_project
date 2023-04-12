@@ -24,19 +24,19 @@
 import SwiftUI
 
 struct OrdersView: View {
+    
+    @StateObject private var viewModel: OrderViewModel = OrderViewModel()
+
+    
     var body: some View {
         VStack(alignment: .leading) {
             AppBar("My Orders")
             SizedBox(height: 10)
-            ScrollView{
-                OrderCard()
-                    .padding(.bottom,10)
-                OrderCard()
-                    .padding(.bottom,10)
-                OrderCard()
-                    .padding(.bottom,10)
-                OrderCard()
-                    .padding(.bottom,10)
+            ScrollView(showsIndicators: false){
+                ForEach(viewModel.results) { item in
+                    OrderCard(order: item)
+                        .padding(.bottom,10)
+                }
             }
          
         }
@@ -55,6 +55,8 @@ struct OrdersView_Previews: PreviewProvider {
 }
 
 struct OrderCard: View {
+    var order: Order
+
     var body: some View {
         ZStack(alignment: .topLeading) {
             Rectangle()
@@ -63,19 +65,19 @@ struct OrderCard: View {
                 .frame(maxWidth: .infinity)
             
             VStack {
-                Subtitle("Order number:1023")
+                Subtitle("Order number: \(String(order.hash).suffix(5))")
                     .crossAlignment(.leading)
                 HStack {
-                    Title("January 20, 2020",fontSize: 20)
+                    Title(order.getFormattedDate(),fontSize: 20)
                     Spacer()
-                    Title("$40.00",fontSize: 20)
+                    Title("\(String(format: "$%.2f", order.getTotal()))",fontSize: 20)
                 }
                 SizedBox(height: 5)
                 HorizantalDivider(color: Color(hex:0x2E292A))
                 SizedBox(height: 5)
-                Subtitle("3 Items")
+                Subtitle("\(order.menuItems.count) Item(s)")
                     .crossAlignment(.leading)
-                Subtitle("HOUSE Double and 2 more items ...")
+                Subtitle(order.getMenuItemsString(maxLength: 40))
                     .crossAlignment(.leading)
                 
                 SizedBox(height: 10)
