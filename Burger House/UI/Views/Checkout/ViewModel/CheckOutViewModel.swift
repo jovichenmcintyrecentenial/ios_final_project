@@ -16,6 +16,11 @@ class CheckoutViewModel: ObservableObject {
     @Published var deliveryFee: Double = 0
     @Published var tax: Double = 0
     @Published var actualTotal: Double = 0
+    @Published var card: Card?
+    @Published var showError: Bool = false
+    @Published var errorMessage: String = ""
+    
+    
     
     var observer: NSObjectProtocol?
     
@@ -33,6 +38,18 @@ class CheckoutViewModel: ObservableObject {
         deliveryFee = deliveryFeeAmount
         tax = subtotal * taxPercent
         actualTotal = subtotal + serviceFee + deliveryFee + tax
+    }
+    
+    func isValid() -> Bool {
+        if(card == nil){
+            errorMessage = "Please select a payment method"
+            return false
+        }
+        return true
+    }
+    
+    func createOrder(){
+        
     }
     
 }

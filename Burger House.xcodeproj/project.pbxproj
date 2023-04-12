@@ -56,6 +56,8 @@
 		98E4F13329E560080081F0E4 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13229E560080081F0E4 /* CheckListItem.swift */; };
 		98E4F13529E560350081F0E4 /* SummaryRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13429E560350081F0E4 /* SummaryRowItem.swift */; };
 		98E4F13829E5620C0081F0E4 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */; };
+		98E4F13A29E68E160081F0E4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13929E68E160081F0E4 /* Card.swift */; };
+		98E4F13C29E696D70081F0E4 /* PaymentCardListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13B29E696D70081F0E4 /* PaymentCardListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,8 @@
 		98E4F13229E560080081F0E4 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 		98E4F13429E560350081F0E4 /* SummaryRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRowItem.swift; sourceTree = "<group>"; };
 		98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		98E4F13929E68E160081F0E4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		98E4F13B29E696D70081F0E4 /* PaymentCardListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 				9863D9B429D362C4008F0C3F /* MenuItem.swift */,
 				9863D9B729D3A650008F0C3F /* CartModel.swift */,
 				98E4F12529E386E50081F0E4 /* User.swift */,
+				98E4F13929E68E160081F0E4 /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */,
 				98E4F13229E560080081F0E4 /* CheckListItem.swift */,
 				98E4F13429E560350081F0E4 /* SummaryRowItem.swift */,
+				98E4F13B29E696D70081F0E4 /* PaymentCardListItem.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -570,9 +576,11 @@
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
 				98E4F13129E542110081F0E4 /* CheckOutViewModel.swift in Sources */,
+				98E4F13C29E696D70081F0E4 /* PaymentCardListItem.swift in Sources */,
 				9863D9B629D36B89008F0C3F /* MenuItem.swift in Sources */,
 				98A70D4E29D0F88400B13043 /* ButtonText.swift in Sources */,
 				98E4F12C29E53A270081F0E4 /* CheckoutView.swift in Sources */,
+				98E4F13A29E68E160081F0E4 /* Card.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,
