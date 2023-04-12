@@ -11,24 +11,45 @@ import SwiftUI
 struct CheckoutView: View {
     
     @StateObject private var viewModel: CheckoutViewModel = CheckoutViewModel()
+    @State private var isBottomSheetOpen = true
+
 
     var body: some View {
-        VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 1) {
-                            ForEach(viewModel.results) { item in
-                                CheckoutMenuItem(menuItem: item,scaleFactor: 0.8)
+        ZStack {
+            VStack {
+                ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing:4) {
+                                ForEach(viewModel.results) { item in
+                                    CheckoutMenuItem(menuItem: item,scaleFactor: 0.8)
+                                }
                             }
-                        }
-                        .padding()
-                    }
-            SizedBox(width: .infinity)
-            Spacer()
-        }
-        .background(theme.backgroundColor)
-        .customNav()
+                }
+                SizedBox(height: 10)
+                CheckListItem(titleText: "Your Delivery Address", subtitleText: "Select an address" ,image: "card_map_pin")
+                    .navigation(to: PaymentMethods(viewModel: viewModel))
+                SizedBox(height: 2)
+                CheckListItem(titleText: "Payment Method", subtitleText: "Select a payment method" ,image: "card_cc_icon")
+                VStack {
+                    SummaryRow(label: "Subtotal", value: Cart.getTotal())
+                       SummaryRow(label: "Delivery Fee", value: viewModel.deliveryFee)
+                       SummaryRow(label: "Service Tax", value: viewModel.serviceFee)
+                       HorizantalDivider(thickness: 0.5)
+                       SummaryRow(label: "Total", value: viewModel.actualTotal, isTotal: true)
+                           }
+                .padding(16)
+                .background(RoundedRectangle(cornerRadius: 15)
+                    .fill(theme.backgroundColorLight)
+                                .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2))
+                Spacer()
+                MainButton(title: "Confirm"){}.padding(.horizontal,20)
+            }
+            .padding(.horizontal,20)
+            .background(theme.backgroundColor)
+            .customNav()
 
         .navigationTitle("Confirmation")
+
+        }
     }
 }
 
@@ -37,4 +58,6 @@ struct OrderConfirmation_Previews: PreviewProvider {
         CheckoutView()
     }
 }
+
+
 

@@ -11,29 +11,28 @@ import RealmSwift
 class CheckoutViewModel: ObservableObject {
     
     @Published var results: Results<MenuItem>
-    @Published var total: String = "0"
-    @Published var serviceFee: String = "0"
-    @Published var deliveryFee: String = "0"
-    @Published var tax: String = "0"
+    @Published var subtotal: Double = 0
+    @Published var serviceFee: Double = 0
+    @Published var deliveryFee: Double = 0
+    @Published var tax: Double = 0
+    @Published var actualTotal: Double = 0
     
     var observer: NSObjectProtocol?
     
     init() {
-        total = Cart.getTotalFormatted()
+        subtotal = Cart.getTotal()
         results = Cart.getItems()
-        calculateFeesAndTax()
+        calculateFeesTaxAndTotal()
     }
     
-    func calculateFeesAndTax() {
-        let totalAmount = Cart.getTotal()
+    func calculateFeesTaxAndTotal() {
         let serviceFeePercent = 0.03 // 3% service fee
         let deliveryFeeAmount = 2.99 // fixed delivery fee amount
         let taxPercent = 0.13 // 13% tax
-        let serviceFeeAmount = totalAmount * serviceFeePercent
-        let taxAmount = totalAmount * taxPercent
-        serviceFee = String(format: "$%.2f", serviceFeeAmount)
-        deliveryFee = String(format: "$%.2f", deliveryFeeAmount)
-        tax = String(format: "$%.2f", taxAmount)
+        serviceFee = subtotal * serviceFeePercent
+        deliveryFee = deliveryFeeAmount
+        tax = subtotal * taxPercent
+        actualTotal = subtotal + serviceFee + deliveryFee + tax
     }
     
 }

@@ -53,6 +53,9 @@
 		98E4F12C29E53A270081F0E4 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12B29E53A270081F0E4 /* CheckoutView.swift */; };
 		98E4F12E29E541240081F0E4 /* CheckOutMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */; };
 		98E4F13129E542110081F0E4 /* CheckOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13029E542110081F0E4 /* CheckOutViewModel.swift */; };
+		98E4F13329E560080081F0E4 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13229E560080081F0E4 /* CheckListItem.swift */; };
+		98E4F13529E560350081F0E4 /* SummaryRowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13429E560350081F0E4 /* SummaryRowItem.swift */; };
+		98E4F13829E5620C0081F0E4 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,9 @@
 		98E4F12B29E53A270081F0E4 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutMenuItem.swift; sourceTree = "<group>"; };
 		98E4F13029E542110081F0E4 /* CheckOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewModel.swift; sourceTree = "<group>"; };
+		98E4F13229E560080081F0E4 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
+		98E4F13429E560350081F0E4 /* SummaryRowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRowItem.swift; sourceTree = "<group>"; };
+		98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,8 @@
 				98A70D3D29D0DC4600B13043 /* HorizontalDivider.swift */,
 				98A70D4D29D0F88400B13043 /* ButtonText.swift */,
 				98E4F12D29E541240081F0E4 /* CheckOutMenuItem.swift */,
+				98E4F13229E560080081F0E4 /* CheckListItem.swift */,
+				98E4F13429E560350081F0E4 /* SummaryRowItem.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98E4F13629E561A80081F0E4 /* PaymmentMethod */,
 				98E4F12A29E539FF0081F0E4 /* Checkout */,
 				98A70D4729D0F08500B13043 /* SignUp */,
 				98A70D4129D0E64500B13043 /* SignIn */,
@@ -392,6 +401,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		98E4F13629E561A80081F0E4 /* PaymmentMethod */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */,
+			);
+			path = PaymmentMethod;
+			sourceTree = "<group>";
+		};
 		C7F35121C3E6BC019EEAB4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +556,8 @@
 				98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */,
 				98A70D2F29D0C60400B13043 /* NotificationExtension.swift in Sources */,
 				98A70D1429D0104F00B13043 /* Title.swift in Sources */,
+				98E4F13529E560350081F0E4 /* SummaryRowItem.swift in Sources */,
+				98E4F13829E5620C0081F0E4 /* PaymentMethod.swift in Sources */,
 				98A70CFD29D0037E00B13043 /* Orders.swift in Sources */,
 				98A70D1B29D0333A00B13043 /* GridView.swift in Sources */,
 				98A70D4329D0E65600B13043 /* SignInView.swift in Sources */,
@@ -546,6 +565,7 @@
 				98A70D4C29D0F18A00B13043 /* SignUpViewModel.swift in Sources */,
 				9863D9B829D3A650008F0C3F /* CartModel.swift in Sources */,
 				98E4F12629E386E50081F0E4 /* User.swift in Sources */,
+				98E4F13329E560080081F0E4 /* CheckListItem.swift in Sources */,
 				98A70D2829D0B20000B13043 /* NavButton.swift in Sources */,
 				98A70CFF29D003A600B13043 /* CartView.swift in Sources */,
 				98A70D3C29D0DA0F00B13043 /* MainButton.swift in Sources */,
