@@ -24,6 +24,7 @@
 import SwiftUI
 
 struct NavigationModifier<Destination: View>: ViewModifier {
+
     @State private var isActive = false
     let destination: Destination
     let conditionalNavigation: (() -> Bool)?
@@ -63,4 +64,9 @@ extension View {
     func navigation<Destination: View>(to destination: Destination, conditionalNavigation: (() -> Bool)? = nil) -> some View {
         self.modifier(NavigationModifier(destination: destination, conditionalNavigation: conditionalNavigation))
     }
+}
+
+
+class NavigationHelper: ObservableObject {
+    @Published var selection: String? = nil
 }

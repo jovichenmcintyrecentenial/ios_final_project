@@ -28,6 +28,7 @@ import SwiftUI
 extension Notification.Name {
     static let cartButtonPressed = Notification.Name("CartButtonPressed")
     static let goShoppingPressed = Notification.Name("GoShopping")
+    static let goToOrder = Notification.Name("GoToOrder")
     static let updateCart = Notification.Name("UpdateCart")
 
 }

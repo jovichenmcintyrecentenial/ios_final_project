@@ -40,11 +40,15 @@ struct MainView: View {
             .background(theme.backgroundColor)
             .onObserverNotification(.cartButtonPressed)
              { notification in
-                selectedTab = 4
+                selectedTab = 3
             }
+             .onObserverNotification(.goToOrder)
+              { notification in
+                 selectedTab = 2
+             }
              .onObserverNotification(.goShoppingPressed)
               { notification in
-                 selectedTab = 1
+                 selectedTab = 0
              }
               .navigationBarBackButtonHidden(true)
              

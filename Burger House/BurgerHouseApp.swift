@@ -29,7 +29,7 @@ struct Burger_HouseApp: App {
         WindowGroup {
             NavigationView {
                 SignInView()
-            }.navigationViewStyle(.stack)
+            }.navigationViewStyle(.stack).environmentObject(NavigationHelper())
             
         }
     }

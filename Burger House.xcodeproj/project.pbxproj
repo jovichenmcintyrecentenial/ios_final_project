@@ -58,6 +58,7 @@
 		98E4F13829E5620C0081F0E4 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */; };
 		98E4F13A29E68E160081F0E4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13929E68E160081F0E4 /* Card.swift */; };
 		98E4F13C29E696D70081F0E4 /* PaymentCardListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13B29E696D70081F0E4 /* PaymentCardListItem.swift */; };
+		98E4F13F29E6BC560081F0E4 /* OrderConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F13E29E6BC560081F0E4 /* OrderConfirmation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		98E4F13729E5620C0081F0E4 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		98E4F13929E68E160081F0E4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		98E4F13B29E696D70081F0E4 /* PaymentCardListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardListItem.swift; sourceTree = "<group>"; };
+		98E4F13E29E6BC560081F0E4 /* OrderConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98E4F13D29E6BC3C0081F0E4 /* OrderConfirmation */,
 				98E4F13629E561A80081F0E4 /* PaymmentMethod */,
 				98E4F12A29E539FF0081F0E4 /* Checkout */,
 				98A70D4729D0F08500B13043 /* SignUp */,
@@ -415,6 +418,14 @@
 			path = PaymmentMethod;
 			sourceTree = "<group>";
 		};
+		98E4F13D29E6BC3C0081F0E4 /* OrderConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F13E29E6BC560081F0E4 /* OrderConfirmation.swift */,
+			);
+			path = OrderConfirmation;
+			sourceTree = "<group>";
+		};
 		C7F35121C3E6BC019EEAB4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +568,7 @@
 				98A70CEB29CFE89E00B13043 /* RoundTextField.swift in Sources */,
 				98E4F12929E3D4E70081F0E4 /* ErrorHandlingProtocol.swift in Sources */,
 				98A70D1929D01F1B00B13043 /* SizedBox.swift in Sources */,
+				98E4F13F29E6BC560081F0E4 /* OrderConfirmation.swift in Sources */,
 				98A70CDC29CFE52500B13043 /* BurgerHouseApp.swift in Sources */,
 				98A70D3529D0CD8300B13043 /* CartViewModel.swift in Sources */,
 				98A70D2D29D0BBFE00B13043 /* CustomeBackButotn.swift in Sources */,

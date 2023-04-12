@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct CheckoutView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
+
     @StateObject private var viewModel: CheckoutViewModel = CheckoutViewModel()
     @State private var isBottomSheetOpen = true
 
@@ -44,12 +45,22 @@ struct CheckoutView: View {
                     .fill(theme.backgroundColorLight)
                                 .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2))
                 Spacer()
-                MainButton(title: "Confirm"){
+                MainButton(title: "Confirm",onTap:  {
+                }, clickable:false)
+                .navigation(to: OrderConfirmationView()) {
                     if viewModel.isValid() {
                         viewModel.createOrder()
+//                        presentationMode.wrappedValue.dismiss()
+                        return true
                     } else {
-                       viewModel.showErrorAlert = true
+                        viewModel.showErrorAlert = true
                     }
+                    
+                    return false
+                    
+                
+                
+                    
                 }.padding(.horizontal,20)
             }
             .padding(.horizontal,20)
@@ -68,7 +79,7 @@ struct CheckoutView: View {
     }
 }
 
-struct OrderConfirmation_Previews: PreviewProvider {
+struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
         CheckoutView()
     }
