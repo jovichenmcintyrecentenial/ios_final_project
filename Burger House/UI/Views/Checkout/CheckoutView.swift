@@ -48,14 +48,14 @@ struct CheckoutView: View {
                     if viewModel.isValid() {
                         viewModel.createOrder()
                     } else {
-                       viewModel.showError = true
+                       viewModel.showErrorAlert = true
                     }
                 }.padding(.horizontal,20)
             }
             .padding(.horizontal,20)
             .background(theme.backgroundColor)
             .customNav()
-            .alert(isPresented: $viewModel.showError) {
+            .alert(isPresented: $viewModel.showErrorAlert) {
                 Alert(
                     title: Text("Error"),
                     message: Text(viewModel.errorMessage),

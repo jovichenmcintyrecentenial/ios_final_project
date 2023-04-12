@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class CheckoutViewModel: ObservableObject {
+class CheckoutViewModel: ErrorHandling {
     
     @Published var results: Results<MenuItem>
     @Published var subtotal: Double = 0
@@ -17,16 +17,17 @@ class CheckoutViewModel: ObservableObject {
     @Published var tax: Double = 0
     @Published var actualTotal: Double = 0
     @Published var card: Card?
-    @Published var showError: Bool = false
-    @Published var errorMessage: String = ""
+
     
     
     
     var observer: NSObjectProtocol?
     
-    init() {
+    override init() {
         subtotal = Cart.getTotal()
         results = Cart.getItems()
+        super.init()
+
         calculateFeesTaxAndTotal()
     }
     
@@ -40,7 +41,7 @@ class CheckoutViewModel: ObservableObject {
         actualTotal = subtotal + serviceFee + deliveryFee + tax
     }
     
-    func isValid() -> Bool {
+    override func isValid() -> Bool {
         if(card == nil){
             errorMessage = "Please select a payment method"
             return false
