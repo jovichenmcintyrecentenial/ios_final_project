@@ -16,7 +16,7 @@ struct HomeView: View {
             VStack(alignment:.leading) {
                 HStack(alignment:.bottom){
                     VStack(alignment: .leading) {
-                        Subtitle("Hello Johnson")
+                        Subtitle("Hello \(LoginManger.user!.firstName)")
                         Title("Hungry Now?")
                     }
                     Spacer()

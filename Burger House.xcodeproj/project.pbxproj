@@ -63,6 +63,7 @@
 		98E4F14329E6D1200081F0E4 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F14229E6D1200081F0E4 /* Fee.swift */; };
 		98E4F14629E7051E0081F0E4 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F14529E7051E0081F0E4 /* LoginManager.swift */; };
 		98E4F14929E711010081F0E4 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F14829E711010081F0E4 /* OrderViewModel.swift */; };
+		98E4F15029E738C00081F0E4 /* OrderReciept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4F14F29E738C00081F0E4 /* OrderReciept.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		98E4F14229E6D1200081F0E4 /* Fee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
 		98E4F14529E7051E0081F0E4 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		98E4F14829E711010081F0E4 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		98E4F14F29E738C00081F0E4 /* OrderReciept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderReciept.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		98A70CF329D0026E00B13043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				98E4F14E29E738260081F0E4 /* OrderReceipt */,
 				98E4F13D29E6BC3C0081F0E4 /* OrderConfirmation */,
 				98E4F13629E561A80081F0E4 /* PaymmentMethod */,
 				98E4F12A29E539FF0081F0E4 /* Checkout */,
@@ -446,6 +449,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		98E4F14E29E738260081F0E4 /* OrderReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				98E4F14F29E738C00081F0E4 /* OrderReciept.swift */,
+			);
+			path = OrderReceipt;
+			sourceTree = "<group>";
+		};
 		C7F35121C3E6BC019EEAB4E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +630,7 @@
 				98E4F13A29E68E160081F0E4 /* Card.swift in Sources */,
 				98A70D1229D0101200B13043 /* Subtitle.swift in Sources */,
 				98A70D4929D0F09100B13043 /* SignUpView.swift in Sources */,
+				98E4F15029E738C00081F0E4 /* OrderReciept.swift in Sources */,
 				98A70CF129D000AF00B13043 /* ColorExtension.swift in Sources */,
 				98A70CF929D0036500B13043 /* Home.swift in Sources */,
 			);

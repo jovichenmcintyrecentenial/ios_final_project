@@ -53,6 +53,16 @@ class Order: Object, Identifiable {
         return total
     }
     
+    func getFormattedTotal() -> String {
+        let total = getTotal()
+        return String(format: "$%.2f", total)
+    }
+    
+    func getFormattedSubTotal() -> String {
+        let total = getSubTotal()
+        return String(format: "$%.2f", total)
+    }
+    
     static func createOrder(){
         
         let order = Order()
@@ -88,7 +98,7 @@ class Order: Object, Identifiable {
     //static function use to access data
     static func getItems()->Results<Order>{
         let realm = try! Realm()
-        return realm.objects(Order.self)
+        return realm.objects(Order.self).sorted(byKeyPath: "createdAt", ascending: false)
     }
     
     

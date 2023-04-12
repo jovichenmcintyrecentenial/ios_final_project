@@ -68,6 +68,10 @@ class MenuItem: Object,Identifiable {
         }
     }
     
+    func getFormattedPrice() -> String {
+        return String(format: "$%.2f", price)
+    }
+    
     //function use to delete obj from realm database
     func delete(){
         let realm = try! Realm()

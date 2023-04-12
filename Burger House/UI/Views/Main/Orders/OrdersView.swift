@@ -77,17 +77,20 @@ struct OrderCard: View {
                 SizedBox(height: 5)
                 Subtitle("\(order.menuItems.count) Item(s)")
                     .crossAlignment(.leading)
-                Subtitle(order.getMenuItemsString(maxLength: 40))
+                Subtitle(order.getMenuItemsString(maxLength: 35))
                     .crossAlignment(.leading)
                 
-                SizedBox(height: 10)
-                MainButton(title: "View Receipt",height: 40,fontSize: 15.0, radius: 10) {
-                }
-                .frame(width: 120).crossAlignment(.leading)
+                VStack {
+                    SizedBox(height: 5)
 
+                    MainButton(title: "View Receipt", height: 40, fontSize: 15.0, radius: 10, onTap: {},clickable:false)
+                        .navigation(to: OrderRecieptView(order: order))
+                }
+                .frame(width: 120)
+                .crossAlignment(.leading)
                 
             }
-            
+
             
             .padding(.horizontal, 20)
             .padding(.vertical, 20)
