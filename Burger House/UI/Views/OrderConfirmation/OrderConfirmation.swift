@@ -42,8 +42,10 @@ struct OrderConfirmationView: View {
         .onAppear {
                         Order.createOrder()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-                            Cart.clearCart()
+
                             emit(notificationName: .goToOrder)
+                            Cart.clearCart()
+
                         }
                     }
         

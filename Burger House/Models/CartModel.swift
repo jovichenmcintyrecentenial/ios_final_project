@@ -35,12 +35,18 @@ class Cart {
     }
     
     static func getAddedMenuItems(_ menuItem: MenuItem) -> Int {
-        let realm = try! Realm()
-
-        let foundItem = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
-        
-        if(foundItem != nil){
-            return foundItem!.quantity
+        do {
+            if(!menuItem.isInvalidated){
+                
+                let realm = try Realm()
+                let foundItem = realm.objects(MenuItem.self).filter("ID = %@", menuItem.ID).first
+                
+                if let item = foundItem {
+                    return item.quantity
+                }
+            }
+        } catch {
+            print("Error getting added menu items: \(error)")
         }
         return 0
     }
