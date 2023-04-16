@@ -44,6 +44,10 @@ struct SignInView: View {
                         if(viewModel.isValidCredenticals()){
                             return true
                         }
+                        else{
+                            viewModel.showErrorAlert = true
+                            viewModel.errorMessage = "Invalid user name or password"
+                        }
                     }
                     return false
                     

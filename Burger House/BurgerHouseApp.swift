@@ -26,11 +26,16 @@ import SwiftUI
  @main
 struct Burger_HouseApp: App {
     var body: some Scene {
-        WindowGroup {
-            NavigationView {
-                SignInView()
-            }.navigationViewStyle(.stack).environmentObject(NavigationHelper())
-            
+            WindowGroup {
+                if LoginManager.getUser() != nil {
+                    NavigationView {
+                        MainView()
+                    }.navigationViewStyle(.stack).environmentObject(NavigationHelper())
+                } else {
+                    NavigationView {
+                        SignInView()
+                    }.navigationViewStyle(.stack).environmentObject(NavigationHelper())
+                }
+            }
         }
-    }
 }

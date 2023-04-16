@@ -30,8 +30,20 @@ class Theme:ObservableObject {
     @Published var mainFontColor: Color = Color(hex:0xE1E3EB)
     @Published var mainSubtleFontColor: Color = Color(hex:0x7A7D86)
     @Published var accentColor: Color = Color(hex:0xDF933B)
+    
+    func applyAlternativeTheme() {
+        primaryColor = Color(hex: 0x8B4513)
+        backgroundColor = Color(hex: 0xF5DEB3)
+        backgroundColorLight = Color(hex: 0xFFF8DC)
+        mainFontColor = Color(hex: 0x4B0082)
+        mainSubtleFontColor = Color(hex: 0x8B008B)
+        accentColor = Color(hex: 0x6B8E23)
+    }
 
 }
 
+
 var theme = Theme()
+
+
 
